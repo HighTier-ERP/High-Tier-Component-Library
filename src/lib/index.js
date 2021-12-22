@@ -1,2 +1,3 @@
+import Input from "./components/input-component/Input";
 import TextArea from "./components/text-area-component/TextArea";
-export { TextArea };
+export { Input, TextArea };

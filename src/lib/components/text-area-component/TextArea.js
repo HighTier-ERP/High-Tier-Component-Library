@@ -1,5 +1,5 @@
 //PACKAGE IMPORTS
-import PropTypes from "prop-types";
+import React from "react";
 import "./TextArea.scss";
 
 //COMPONENT DESCRIPTION
@@ -31,16 +31,6 @@ const TextArea = ({
       </label>
     </div>
   );
-};
-
-TextArea.propTypes = {
-  classes: PropTypes.string,
-  groupClasses: PropTypes.string,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  rows: PropTypes.number,
-  type: PropTypes.string,
-  value: PropTypes.string,
 };
 
 export default TextArea;
