@@ -1,6 +1,6 @@
 //PACKAGE IMPORTS
 import PropTypes from "prop-types";
-import "./TextArea.css";
+import "./TextArea.scss";
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/

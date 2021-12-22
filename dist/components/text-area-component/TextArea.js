@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-require("./TextArea.css");
+require("./TextArea.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
