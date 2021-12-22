@@ -7,7 +7,15 @@ import { v4 as uuidv4 } from "uuid";
 //Reusable input component to speed up form development
 /*----------------------------------------------------------------------------*/
 
-const Input = ({ type, groupClasses }) => {
+const Input = ({
+  type,
+  name,
+  placeholder,
+  value,
+  onChange,
+  classes,
+  groupClasses,
+}) => {
   return (
     <div className={`form__group field ${groupClasses}`}>
       <input
