@@ -7,7 +7,7 @@ import "./TextArea.scss";
 // Reusable textarea component to speed up form development
 /*----------------------------------------------------------------------------*/
 
-const Textarea = ({
+const TextArea = ({
   classes,
   groupClasses,
   name,
