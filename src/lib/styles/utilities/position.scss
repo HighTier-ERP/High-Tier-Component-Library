@@ -15,6 +15,12 @@
   position: absolute !important;
 }
 
+.absolute-md-up {
+  @include for-tablet-landscape-up {
+    position: absolute !important;
+  }
+}
+
 .position-tablet-absolute {
   @include for-xl-desktop-up {
     position: absolute !important;
