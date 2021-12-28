@@ -36,33 +36,34 @@ $blueDefault: #1a8fff;
 $inputColorDefault: #9b9b9b;
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
 ) !default;
 
 :root {
-	--text-color-light: #{$grayDefault};
-	--border-color: #eee;
-	--neutral-color: #{$whiteDefault};
-	--main-theme-white-default: #{$whiteDefault};
-	--main-theme-black-default: #{$blackDefault};
-	--main-theme-gray-default: #{$grayDefault};
-	--main-theme-gray-1: #{$gray100};
-	--main-theme-gray-2: #{$gray200};
-	--main-theme-gray-3: #{$gray300};
-	--main-theme-gray-4: #{$gray400};
-	--main-theme-gray-5: #{$gray500};
-	--main-theme-gray-6: #{$gray600};
-	--main-theme-gray-7: #{$gray700};
-	--main-theme-gray-8: #{$gray800};
-	--main-theme-gray-9: #{$gray900};
-	--main-theme-text-color-primary: #{$primary};
-	--main-theme-calendar-text-color: #{$blueDefault};
-	--main-theme-border-gradient-start: #{$primary};
-	--main-theme-border-gradient-end: #{$secondary};
-	--main-theme-input-border-bottom: #{$inputColorDefault};
-	--main-theme-input-text-color: #{$inputColorDefault};
+  --theme-main-background-color: #{$gray100};
+  --text-color-light: #{$grayDefault};
+  --border-color: #eee;
+  --neutral-color: #{$whiteDefault};
+  --main-theme-white-default: #{$whiteDefault};
+  --main-theme-black-default: #{$blackDefault};
+  --main-theme-gray-default: #{$grayDefault};
+  --main-theme-gray-1: #{$gray100};
+  --main-theme-gray-2: #{$gray200};
+  --main-theme-gray-3: #{$gray300};
+  --main-theme-gray-4: #{$gray400};
+  --main-theme-gray-5: #{$gray500};
+  --main-theme-gray-6: #{$gray600};
+  --main-theme-gray-7: #{$gray700};
+  --main-theme-gray-8: #{$gray800};
+  --main-theme-gray-9: #{$gray900};
+  --main-theme-text-color-primary: #{$primary};
+  --main-theme-calendar-text-color: #{$blueDefault};
+  --main-theme-border-gradient-start: #{$primary};
+  --main-theme-border-gradient-end: #{$secondary};
+  --main-theme-input-border-bottom: #{$inputColorDefault};
+  --main-theme-input-text-color: #{$inputColorDefault};
 }

@@ -30,7 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
   min-height: 100vh;
-  background: #ffffff;
+  background: var(--theme-main-background-color);
   scroll-behavior: smooth;
   overflow-x: hidden !important;
 }

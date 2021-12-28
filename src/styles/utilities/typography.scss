@@ -71,6 +71,9 @@ p,
   &-body {
     color: var(--main-theme-gray-9) !important;
   }
+  &-uppercase {
+    text-transform: uppercase;
+  }
 }
 .l-s {
   &-4_5px {
@@ -78,6 +81,12 @@ p,
   }
   &-3_5px {
     letter-spacing: 3.5px;
+  }
+}
+
+.l-h {
+  &-1_2em {
+    line-height: 1.2em !important;
   }
 }
 
@@ -298,4 +307,8 @@ p,
 
 .text-capitalize {
   text-transform: capitalize !important;
+}
+
+.italic {
+  font-style: italic !important;
 }
