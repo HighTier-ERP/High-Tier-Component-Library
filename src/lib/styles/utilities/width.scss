@@ -59,7 +59,9 @@
 	&-100vw {
 		width: 100vw !important;
 	}
+	
 	// Fixed Pixel Width Utility Classes
+	
 	&-10px {
 		width: 10px;
 	}
@@ -490,7 +492,7 @@
 			left: 30px;
 			right: 30px;
 		}
-		@include for-phone-only {
+		@include for-tablet-landscape-down {
 			-webkit-box-flex: 0 0 100%;
 			-ms-flex: 0 0 100%;
 			flex: 0 0 100%;
