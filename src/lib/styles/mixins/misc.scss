@@ -2,170 +2,170 @@
 /// @access public
 /// @param {String} $element - Element's name
 @mixin element($element) {
-	&__#{$element} {
-		@content;
-	}
+  &__#{$element} {
+    @content;
+  }
 }
 
 /// Block Modifier
 /// @access public
 /// @param {String} $modifier - Modifier's name
 @mixin modifier($modifier) {
-	&--#{$modifier} {
-		@content;
-	}
+  &--#{$modifier} {
+    @content;
+  }
 }
 
 @mixin font-family-erp {
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
-		'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3',
-		'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Arial,
-		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ,
+    Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @mixin for-phone-only {
-	@media (max-width: 599px) {
-		@content;
-	}
+  @media (max-width: 599px) {
+    @content;
+  }
 }
 @mixin for-tablet-portrait-up {
-	@media (min-width: 600px) {
-		@content;
-	}
+  @media (min-width: 600px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-landscape-down {
-	@media (max-width: 900px) {
-		@content;
-	}
+  @media (max-width: 900px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-landscape-up {
-	@media (min-width: 900px) {
-		@content;
-	}
+  @media (min-width: 900px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-down {
-	@media (max-width: 1250px) {
-		@content;
-	}
+  @media (max-width: 1250px) {
+    @content;
+  }
 }
 
 @mixin for-tablet-up {
-	@media (min-width: 1250px) {
-		@content;
-	}
+  @media (min-width: 1250px) {
+    @content;
+  }
 }
 
 @mixin for-desktop-up {
-	@media (min-width: 1200px) {
-		@content;
-	}
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin for-desktop-down {
-	@media (max-width: 1560px) {
-		@content;
-	}
+  @media (max-width: 1560px) {
+    @content;
+  }
 }
 
 @mixin for-xl-desktop-up {
-	@media (min-width: 1600px) {
-		@content;
-	}
+  @media (min-width: 1600px) {
+    @content;
+  }
 }
 
 @mixin for-big-desktop-up {
-	@media (min-width: 1800px) {
-		@content;
-	}
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
 
 @mixin brochureCta {
-	position: relative;
-	display: inline-flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	align-items: center;
-	-webkit-margin-before: 8px;
-	margin-block-start: 8px;
-	-webkit-margin-after: 8px;
-	margin-block-end: 8px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-size: 16px !important;
-	line-height: 1.2;
-	color: #fff;
-	cursor: pointer;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	border-radius: 100px;
-	border: 3px solid transparent;
-	box-shadow: inset 0 0 0 0 transparent;
-	background-color: var(--main-theme-black-default);
-	outline: none;
-	transition: box-shadow 0.25s cubic-bezier(0.5, 0.25, 0.25, 0.75),
-		color 0.25s cubic-bezier(0.5, 0.25, 0.25, 0.75);
-	font-weight: 700 !important;
-	letter-spacing: 3px;
+  position: relative;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  -webkit-margin-before: 8px;
+  margin-block-start: 8px;
+  -webkit-margin-after: 8px;
+  margin-block-end: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px !important;
+  line-height: 1.2;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 3px solid transparent;
+  box-shadow: inset 0 0 0 0 transparent;
+  background-color: var(--main-theme-black-default);
+  outline: none;
+  transition: box-shadow 0.25s cubic-bezier(0.5, 0.25, 0.25, 0.75),
+    color 0.25s cubic-bezier(0.5, 0.25, 0.25, 0.75);
+  font-weight: 700 !important;
+  letter-spacing: 3px;
 }
 
 @mixin ease-in-out {
-	-webkit-transition: all 0.2s ease-in-out 0.8s;
-	-o-transition: all 0.2s ease-in-out 0.8s;
-	transition: all 0.2s ease-in-out 0.8s;
+  -webkit-transition: all 0.2s ease-in-out 0.8s;
+  -o-transition: all 0.2s ease-in-out 0.8s;
+  transition: all 0.2s ease-in-out 0.8s;
 }
 
 @mixin ease-in-out-2 {
-	-webkit-transition: all 0.1s ease-in-out 0.3s;
-	-o-transition: all 0.1s ease-in-out 0.3s;
-	transition: all 0.1s ease-in-out 0.3s;
+  -webkit-transition: all 0.1s ease-in-out 0.3s;
+  -o-transition: all 0.1s ease-in-out 0.3s;
+  transition: all 0.1s ease-in-out 0.3s;
 }
 
 @mixin block {
-	display: block;
+  display: block;
 }
 
 @mixin flex {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @mixin flex-column {
-	-webkit-box-orient: vertical !important;
-	-webkit-box-direction: normal !important;
-	-ms-flex-direction: column !important;
-	flex-direction: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
 }
 @mixin flex-row {
-	-webkit-box-orient: horizontal !important;
-	-webkit-box-direction: normal !important;
-	-ms-flex-direction: row !important;
-	flex-direction: row !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
 }
 @mixin justify-content-center {
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @mixin margin-bottom-0 {
-	margin-bottom: 0 !important;
-	margin-block-start: 0 !important;
-	margin-block-end: 0 !important;
-	margin-inline-start: 0px !important;
-	margin-inline-end: 0px !important;
+  margin-bottom: 0 !important;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 0px !important;
 }
 
 @mixin box-shadow {
-	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
 }

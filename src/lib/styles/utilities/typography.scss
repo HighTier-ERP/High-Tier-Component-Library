@@ -12,12 +12,6 @@ h2 {
   }
 }
 
-h5 {
-  .f-w-500 {
-    font-weight: 500 !important;
-  }
-}
-
 body,
 h1,
 h2,
@@ -33,7 +27,7 @@ p,
 .h5,
 .h6 {
   @include margin-bottom-0;
-  line-height: 1.5em;
+  line-height: var(--default-line-height);
 }
 
 .page-content {
@@ -72,9 +66,36 @@ p,
     color: var(--main-theme-gray-9) !important;
   }
   &-uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
+  }
+  &-capitalize {
+    text-transform: capitalize !important;
+  }
+  &-center {
+    text-align: center !important;
+  }
+  &-left {
+    text-align: left !important;
+  }
+  &-right {
+    text-align: left !important;
+  }
+  &-decoration-none {
+    text-decoration: none !important;
+  }
+  &-decoration-none > a {
+    text-decoration: none !important;
   }
 }
+
+.italic {
+  font-style: italic !important;
+}
+
+.normal {
+  font-style: normal !important;
+}
+
 .l-s {
   &-4_5px {
     letter-spacing: 4.5px;
@@ -107,10 +128,10 @@ p,
 
 .f-s {
   &-3rem {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   &-1_5em {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
   }
   &-5px {
     font-size: 5px !important;
@@ -291,24 +312,4 @@ p,
   &-75 {
     max-width: 75ch;
   }
-}
-
-.text-center {
-  text-align: center !important;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
-.text-decoration-none > a {
-  text-decoration: none !important;
-}
-
-.text-capitalize {
-  text-transform: capitalize !important;
-}
-
-.italic {
-  font-style: italic !important;
 }

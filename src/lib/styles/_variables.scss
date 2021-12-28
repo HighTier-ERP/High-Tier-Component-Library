@@ -51,6 +51,7 @@ $grid-breakpoints: (
 ) !default;
 
 :root {
+  --default-line-height: 1.5em;
   --text-color-light: #{$grayDefault};
   --border-color: #eee;
   --neutral-color: #{$whiteDefault};
