@@ -62,7 +62,6 @@ const GroupAccordion = ({
       className={classNames(
         "accordion-group-item",
         expanded ? "active-accordion" : "",
-        activeId !== accordId ? "none-md-down" : "",
         accordionWidth
       )}
       onClick={handleExpand}
