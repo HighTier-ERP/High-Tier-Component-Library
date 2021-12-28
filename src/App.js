@@ -1,4 +1,4 @@
-import "./styles/high-tier.scss";
+import "./lib/styles/high-tier.scss";
 
 import { Accordion } from "./lib";
 

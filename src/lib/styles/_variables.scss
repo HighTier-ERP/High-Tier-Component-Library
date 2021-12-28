@@ -1,5 +1,12 @@
 //Design Tokens
 
+// Font
+$font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+  Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo,
+  "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+
 // Breakpoints
 $break-extra-small: 375px;
 $break-small: 576px;
@@ -44,10 +51,11 @@ $grid-breakpoints: (
 ) !default;
 
 :root {
-  --theme-main-background-color: #{$gray100};
   --text-color-light: #{$grayDefault};
   --border-color: #eee;
   --neutral-color: #{$whiteDefault};
+  --main-theme-font-family: #{$font-family};
+  --main-theme-background-color: #{$gray100};
   --main-theme-white-default: #{$whiteDefault};
   --main-theme-black-default: #{$blackDefault};
   --main-theme-gray-default: #{$grayDefault};
