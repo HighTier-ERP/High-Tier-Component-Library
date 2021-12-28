@@ -8,9 +8,7 @@
 @import "swiper/scss/effect-fade";
 
 // Overall mixins
-@import "mixins/breakpoints";
-@import "mixins/position";
-@import "mixins/misc";
+@import "mixins/index";
 
 // Overall layout
 @import "utilities/index";
