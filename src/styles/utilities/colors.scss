@@ -1,0 +1,262 @@
+// Color Classes
+.brand-primary {
+	&-bg {
+		background-color: $primary !important;
+	}
+	&-color {
+		color: $primary !important;
+	}
+}
+
+.logo {
+	&-primary {
+		fill: $primary !important;
+	}
+	&-primary-accent {
+		fill: #f4f4f4 !important;
+	}
+}
+
+.logoPackages-0 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #02a05f;
+}
+.logoPackages-1 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: none;
+	stroke: #05cc76;
+	stroke-width: 42;
+	stroke-miterlimit: 10;
+}
+.logoPackages-2 {
+	fill-rule: evenodd;
+	clip-rule: evenodd;
+	fill: #05cc76;
+}
+.logoPackages-3 {
+	fill: #f1f1f1;
+}
+
+.logoPackages-primary {
+	fill: #f82750;
+}
+.logoPackages-secondary {
+	fill: #ffffff;
+}
+.stop1 {
+	stop-color: rgb(97, 209, 198);
+}
+.stop2 {
+	stop-color: rgb(88, 172, 165);
+}
+.stop3 {
+	stop-color: rgb(78, 136, 134);
+}
+
+.stop4 {
+	stop-color: rgb(66, 102, 104);
+}
+
+.stop5 {
+	stop-color: rgb(54, 69, 75);
+}
+
+.abstract-bg-gray {
+	position: absolute;
+	top: -1400px;
+	left: 0;
+	right: 0;
+	transform-origin: 0 50%;
+	height: 1698px;
+	background-color: #f7fafc;
+}
+
+.bg {
+	background-color: $background !important;
+	&-primary {
+		background-color: $primary !important;
+	}
+	&-gray-1 {
+		background-color: var(--main-theme-gray-1) !important;
+	}
+	&-gray-2 {
+		background-color: var(--main-theme-gray-2) !important;
+	}
+	&-gray-3 {
+		background-color: var(--main-theme-gray-3) !important;
+	}
+	&-gray-4 {
+		background-color: var(--main-theme-gray-4) !important;
+	}
+	&-gray-5 {
+		background-color: var(--main-theme-gray-5) !important;
+	}
+	&-gray-6 {
+		background-color: var(--main-theme-gray-6) !important;
+	}
+	&-gray-7 {
+		background-color: var(--main-theme-gray-7) !important;
+	}
+	&-gray-8 {
+		background-color: var(--main-theme-gray-8) !important;
+	}
+	&-gray-9 {
+		background-color: var(--main-theme-gray-9) !important;
+	}
+	&-black {
+		background-color: #000000 !important;
+	}
+	&-black-1 {
+		background-color: #0000001a !important;
+	}
+	&-offwhite {
+		background-color: $offwhite !important;
+	}
+	&-secondary {
+		background-color: $secondary !important;
+	}
+	&-white {
+		background-color: #ffffff !important;
+	}
+	&-white-1 {
+		background-color: #ffffff1a !important;
+	}
+	&-white-8 {
+		background-color: #ffffffcc !important;
+	}
+	&-danger {
+		background-color: $danger !important;
+	}
+	&-danger-accent {
+		background-color: #e6394630 !important;
+	}
+	&-yellow {
+		background-color: #ffd800 !important;
+	}
+}
+
+.bg-fill-white {
+	svg {
+		stroke: #ffffff !important;
+	}
+}
+.btn-danger {
+	color: #fff;
+	background-color: $danger !important;
+	border-color: $danger !important;
+}
+
+.circle-primary {
+	background-color: $primary !important;
+	border-radius: 50%;
+	color: #f4f4f4;
+}
+
+.color {
+	&-accent {
+		fill: #ff6f3d !important;
+		path: #ff6f3d !important;
+		color: #ff6f3d !important;
+	}
+
+	&-secondary {
+		fill: #3e503c !important;
+		color: #3e503c !important;
+		&:hover {
+			fill: #3e503c !important;
+			color: #3e503c !important;
+		}
+	}
+	&-primary {
+		fill: #80896a !important;
+		color: #80896a !important;
+	}
+	&-green {
+		fill: #34a854 !important;
+		color: #34a854 !important;
+	}
+	&-yellow {
+		fill: #fbbc04 !important;
+		color: #fbbc04 !important;
+	}
+	&-red {
+		fill: #ea4335 !important;
+		color: #ea4335 !important;
+	}
+	&-blue {
+		fill: #4285f4 !important;
+		color: #4285f4 !important;
+	}
+	&-great {
+		fill: #156b00 !important;
+		color: #156b00 !important;
+	}
+	&-good {
+		fill: #239b00 !important;
+		color: #239b00 !important;
+	}
+	&-fair {
+		fill: #2dbd00 !important;
+		color: #2dbd00 !important;
+	}
+	&-white {
+		fill: #ffffff !important;
+		color: #ffffff !important;
+	}
+	&-none {
+		fill: none !important;
+	}
+}
+
+.text {
+	&-auto-secondary {
+		color: #3e503c !important;
+		a {
+			color: #3e503c !important;
+		}
+	}
+	&-white {
+		color: #ffffff !important;
+		a {
+			color: #ffffff !important;
+		}
+	}
+	&-color-dark-mode {
+		color: rgba(255, 255, 255, 0.7) !important;
+	}
+	&-danger {
+		color: $danger !important;
+	}
+	&-stellantis {
+		color: #243882 !important;
+		a {
+			color: #243882 !important;
+		}
+	}
+	&-black {
+		color: #000000 !important;
+		a {
+			color: #000000 !important;
+		}
+	}
+	&-gray-1 {
+		color: var(--main-theme-gray-1) !important;
+	}
+	&-gray-2 {
+		color: var(--main-theme-gray-2) !important;
+	}
+	&-gray-3 {
+		color: var(--main-theme-gray-3) !important;
+	}
+	&-gray-4 {
+		color: var(--main-theme-gray-4) !important;
+	}
+	&-gray-5 {
+		color: var(--main-theme-gray-5) !important;
+	}
+	&-gray-6 {
+		color: var(--main-theme-gray-6) !important;
+	}
+}

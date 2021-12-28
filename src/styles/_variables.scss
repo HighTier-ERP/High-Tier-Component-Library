@@ -1,0 +1,68 @@
+//Design Tokens
+
+// Breakpoints
+$break-extra-small: 375px;
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1200px;
+$xl-custom: 1290px;
+
+// Colors
+$primary: #457b9d;
+$primaryAccent: #e8f5fb;
+$secondary: #a8dadc;
+$danger: #e63946;
+$offwhite: #f1faee;
+$accent: #1d3557;
+$background: #f8f9fa;
+
+// Grays
+$gray100: #f8f9fa;
+$gray200: #e9ecef;
+$gray300: #dee2e6;
+$gray400: #ced4da;
+$gray500: #adb5bd;
+$gray600: #6c757d;
+$gray700: #495057;
+$gray800: #343a40;
+$gray900: #212529;
+
+//Defaults
+$blackDefault: #1e1e1e;
+$grayDefault: #cccccc;
+$whiteDefault: #ffffff;
+$blueDefault: #1a8fff;
+$inputColorDefault: #9b9b9b;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+) !default;
+
+:root {
+	--text-color-light: #{$grayDefault};
+	--border-color: #eee;
+	--neutral-color: #{$whiteDefault};
+	--main-theme-white-default: #{$whiteDefault};
+	--main-theme-black-default: #{$blackDefault};
+	--main-theme-gray-default: #{$grayDefault};
+	--main-theme-gray-1: #{$gray100};
+	--main-theme-gray-2: #{$gray200};
+	--main-theme-gray-3: #{$gray300};
+	--main-theme-gray-4: #{$gray400};
+	--main-theme-gray-5: #{$gray500};
+	--main-theme-gray-6: #{$gray600};
+	--main-theme-gray-7: #{$gray700};
+	--main-theme-gray-8: #{$gray800};
+	--main-theme-gray-9: #{$gray900};
+	--main-theme-text-color-primary: #{$primary};
+	--main-theme-calendar-text-color: #{$blueDefault};
+	--main-theme-border-gradient-start: #{$primary};
+	--main-theme-border-gradient-end: #{$secondary};
+	--main-theme-input-border-bottom: #{$inputColorDefault};
+	--main-theme-input-text-color: #{$inputColorDefault};
+}

@@ -1,0 +1,51 @@
+@mixin center-absolute-top {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-top-15 {
+	position: absolute;
+	top: 15vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include media-breakpoint-down(sm) {
+		top: 18.99vh;
+	}
+}
+
+@mixin center-absolute-top-17 {
+	position: absolute;
+	top: 17%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-bottom {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-bottom-5 {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-bottom-15px {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin center-absolute-bottom-5px {
+	position: absolute;
+	bottom: 15px;
+	left: 45%;
+	transform: translate(-50%, -50%);
+}

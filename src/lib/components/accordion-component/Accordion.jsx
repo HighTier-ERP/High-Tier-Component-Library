@@ -8,6 +8,7 @@ const SingleAccordion = ({
   headerClass,
   isExpanded,
   headerIcon,
+  accordionWidth,
 }) => {
   const [expanded, setExpanded] = useState(isExpanded);
   return (
@@ -15,14 +16,15 @@ const SingleAccordion = ({
       tabIndex="0"
       className={classNames(
         "accordion-item",
-        expanded ? "active-accordion" : ""
+        expanded ? "active-accordion" : "",
+        accordionWidth
       )}
       onClick={() => setExpanded(!expanded)}
     >
-      <span className="flex flexRow align-center cursor-pointer">
+      <span className="flex flex-row items-center pointer">
         <span className="material-icons f-s-3rem">{headerIcon}</span>
         <p className={headerClass}>{headerText}</p>
-        <button className="br-full block accordion-btn box-shadow cursor-pointer">
+        <button className="br-full block accordion-btn box-shadow pointer">
           <span className="material-icons text-color-primary">
             {!expanded ? "add" : "remove"}
           </span>
@@ -41,6 +43,7 @@ const GroupAccordion = ({
   accordId,
   activeId,
   setActiveId,
+  accordionWidth,
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -57,16 +60,17 @@ const GroupAccordion = ({
     <article
       tabIndex="0"
       className={classNames(
-        "accordion-group-item col-w-3",
+        "accordion-group-item",
         expanded ? "active-accordion" : "",
-        activeId !== accordId ? "hide-md-down" : ""
+        activeId !== accordId ? "none-md-down" : "",
+        accordionWidth
       )}
       onClick={handleExpand}
     >
-      <span className="flex flexRow align-center cursor-pointer">
+      <span className="flex flex-row items-center pointer">
         <span className="material-icons f-s-3rem">{headerIcon}</span>
         <p className={headerClass}>{headerText}</p>
-        <button className="br-full block accordion-btn box-shadow cursor-pointer">
+        <button className="br-full block accordion-btn box-shadow pointer">
           <span className="material-icons text-color-primary">
             {!expanded ? "add" : "remove"}
           </span>
@@ -87,6 +91,7 @@ const Accordion = ({
   accordId,
   activeId,
   setActiveId,
+  accordionWidth,
 }) => {
   return accordionType === "single" ? (
     <SingleAccordion
@@ -95,6 +100,7 @@ const Accordion = ({
       headerClass={headerClass}
       isExpanded={isExpanded}
       headerIcon={headerIcon}
+      accordionWidth={accordionWidth}
     />
   ) : (
     <GroupAccordion
@@ -105,6 +111,7 @@ const Accordion = ({
       accordId={accordId}
       activeId={activeId}
       setActiveId={setActiveId}
+      accordionWidth={accordionWidth}
     />
   );
 };

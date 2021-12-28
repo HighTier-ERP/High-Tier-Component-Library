@@ -1,0 +1,77 @@
+@import './borders';
+@import './bug_fixes';
+@import './buttons';
+@import './colors';
+@import './display';
+@import './elevation';
+@import './height';
+@import './margin';
+@import './padding';
+@import './position';
+@import './shapes';
+@import './width';
+@import './typography';
+@import './transitions';
+
+// UI Utility Classes
+
+.pointer {
+	cursor: pointer !important;
+}
+
+.user-select-none {
+	-webkit-touch-callout: none !important; /* iOS Safari */
+	-webkit-user-select: none !important; /* Safari */
+	-khtml-user-select: none !important; /* Konqueror HTML */
+	-moz-user-select: none !important; /* Old versions of Firefox */
+	-ms-user-select: none !important; /* Internet Explorer/Edge */
+	user-select: none !important; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.outline-none {
+	outline: none !important;
+}
+
+.blur {
+	&-3 {
+		backdrop-filter: blur(3px);
+	}
+	&-4 {
+		backdrop-filter: blur(4px);
+	}
+	&-10 {
+		backdrop-filter: blur(10px);
+	}
+}
+
+@-ms-viewport {
+	width: device-width;
+}
+
+.collapse-button {
+	display: flex;
+	border: none;
+	background: transparent;
+	&:focus {
+		outline: none;
+	}
+}
+
+.collapse-content.collapsed {
+	display: none;
+}
+
+.collapsed-content.expanded {
+	display: block;
+}
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.logoBackground {
+	fill: #ffd800;
+}

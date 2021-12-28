@@ -1,0 +1,301 @@
+// typography
+
+h1 {
+  @include media-breakpoint-down(md) {
+    font-size: 1.65em;
+  }
+}
+
+h2 {
+  @include media-breakpoint-down(md) {
+    font-size: 1.45em;
+  }
+}
+
+h5 {
+  .f-w-500 {
+    font-weight: 500 !important;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include margin-bottom-0;
+  line-height: 1.5em;
+}
+
+.page-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    margin-bottom: 1.5em !important;
+  }
+
+  li {
+    margin-bottom: 1.5em !important;
+    margin-left: 3.5em !important;
+  }
+}
+
+.text {
+  &-underlined {
+    text-decoration: underline;
+  }
+
+  &-shadow {
+    text-shadow: 1px 1px var(--main-theme-black-default);
+  }
+
+  &-body {
+    color: var(--main-theme-gray-9) !important;
+  }
+}
+.l-s {
+  &-4_5px {
+    letter-spacing: 4.5px;
+  }
+  &-3_5px {
+    letter-spacing: 3.5px;
+  }
+}
+
+.line-height {
+  &-3em {
+    line-height: 3em !important;
+  }
+  &-1_5em {
+    line-height: 1.5em !important;
+  }
+  &-10px {
+    line-height: 10px !important;
+  }
+  &-18px {
+    line-height: 18px !important;
+  }
+}
+
+.f-s {
+  &-3rem {
+    font-size: 3rem;
+  }
+  &-1_5em {
+    font-size: 1.5em;
+  }
+  &-5px {
+    font-size: 5px !important;
+  }
+  &-8px {
+    font-size: 8px !important;
+  }
+  &-9px {
+    font-size: 9px !important;
+  }
+  &-10px {
+    font-size: 10px !important;
+  }
+  &-11px {
+    font-size: 11px !important;
+  }
+  &-12px {
+    font-size: 12px !important;
+  }
+  &-13px {
+    font-size: 12px !important;
+  }
+  &-14px {
+    font-size: 14px !important;
+  }
+
+  &-16px {
+    font-size: 16px !important;
+  }
+
+  &-18px {
+    font-size: 18px !important;
+  }
+
+  &-20px {
+    font-size: 20px !important;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px !important;
+    }
+  }
+
+  &-25px {
+    font-size: 25px !important;
+    @include media-breakpoint-down(lg) {
+      font-size: 16px !important;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 14px !important;
+    }
+  }
+
+  &-30px {
+    font-size: 30px;
+    @include media-breakpoint-down(lg) {
+      font-size: 25px !important;
+    }
+  }
+  &-35px {
+    font-size: 35px;
+    @include media-breakpoint-down(lg) {
+      font-size: 25px !important;
+    }
+  }
+
+  &-md-35px {
+    font-size: 25px !important;
+    @include for-tablet-landscape-up {
+      font-size: 35px !important;
+    }
+  }
+
+  &-40px {
+    font-size: 40px !important;
+    @include media-breakpoint-down(lg) {
+      font-size: 25px !important;
+    }
+  }
+
+  &-md-45px {
+    font-size: 25px !important;
+    @include for-tablet-up {
+      font-size: 45px !important;
+    }
+  }
+
+  &-45px {
+    font-size: 45px !important;
+  }
+
+  &-55px {
+    font-size: 55px;
+    @include media-breakpoint-down(lg) {
+      font-size: 35px !important;
+    }
+  }
+
+  &-65px {
+    font-size: 65px;
+  }
+
+  &-90px {
+    font-size: 90px;
+  }
+
+  &-115px {
+    font-size: 115px;
+  }
+
+  &-125px {
+    font-size: 125px;
+  }
+
+  &-135px {
+    font-size: 135px;
+  }
+}
+
+.font {
+  &-space-mono {
+    font-family: "Space Mono", sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+  }
+  &-work-sans {
+    font-family: "Work Sans", sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+  }
+  &-open-sans {
+    font-family: "Open Sans", arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+  }
+  &-color-red {
+    color: #f01e3d;
+  }
+}
+
+.f-w {
+  &-800 {
+    font-weight: 800 !important;
+  }
+  &-700 {
+    font-weight: 700 !important;
+  }
+
+  &-600 {
+    font-weight: 600 !important;
+  }
+
+  &-500 {
+    font-weight: 500 !important;
+  }
+
+  &-400 {
+    font-weight: 400 !important;
+  }
+
+  &-300 {
+    font-weight: 300 !important;
+  }
+}
+
+.linebreak {
+  white-space: pre-line;
+}
+
+.character {
+  &-40 {
+    max-width: 40ch;
+  }
+  &-65 {
+    max-width: 65ch;
+  }
+  &-75 {
+    max-width: 75ch;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-none > a {
+  text-decoration: none !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}

@@ -1,0 +1,41 @@
+.ease-in {
+	&-out {
+		@include ease-in-out;
+	}
+	&-out-2 {
+		@include ease-in-out-2;
+	}
+}
+
+.transition-smooth {
+	transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s, top 0.3s,
+		position 0.3s, padding-top 0.3s, margin-top 0.3s;
+}
+
+.zoom-1_2:hover {
+	transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0)
+		scaleX(1.2) scaleY(1.2);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+}
+
+.zoom-1_2 {
+	transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0) scaleX(1)
+		scaleY(1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+}
+
+.rotate {
+	&-45 {
+		transform: rotate(45deg);
+	}
+	&-90 {
+		transform: rotate(90deg);
+	}
+	&-180 {
+		transform: rotate(180deg);
+	}
+}
