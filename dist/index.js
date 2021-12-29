@@ -15,6 +15,12 @@ Object.defineProperty(exports, "Input", {
     return _Input.default;
   }
 });
+Object.defineProperty(exports, "MotionDiv", {
+  enumerable: true,
+  get: function get() {
+    return _MotionDiv.default;
+  }
+});
 Object.defineProperty(exports, "TextArea", {
   enumerable: true,
   get: function get() {
@@ -25,6 +31,8 @@ Object.defineProperty(exports, "TextArea", {
 var _Accordion = _interopRequireDefault(require("./components/accordion-component/Accordion"));
 
 var _Input = _interopRequireDefault(require("./components/input-component/Input"));
+
+var _MotionDiv = _interopRequireDefault(require("./components/motion-div-component/MotionDiv"));
 
 var _TextArea = _interopRequireDefault(require("./components/text-area-component/TextArea"));
 
