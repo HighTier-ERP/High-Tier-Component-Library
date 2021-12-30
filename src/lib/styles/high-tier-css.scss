@@ -1,50 +1,50 @@
 // Variables
-@import "_variables.scss";
-@import "material-icons/iconfont/material-icons.scss";
-@import "swiper/scss";
-@import "swiper/scss/navigation";
-@import "swiper/scss/pagination";
-@import "swiper/scss/scrollbar";
-@import "swiper/scss/effect-fade";
+@import '_variables.scss';
+@import 'material-icons/iconfont/material-icons.scss';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/scrollbar';
+@import 'swiper/scss/effect-fade';
 
 // Overall mixins
-@import "mixins/index";
+@import 'mixins/index';
 
 // Overall layout
-@import "utilities/index";
-@import "components/index";
+@import 'utilities/index';
+@import 'components/index';
 
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: var(--main-theme-font-family);
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale !important;
-  text-rendering: optimizeLegibility !important;
-  min-height: 100vh;
-  background: var(--main-theme-background-color);
-  scroll-behavior: smooth;
-  overflow-x: hidden !important;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: var(--main-theme-font-family);
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	text-rendering: optimizeLegibility !important;
+	min-height: 100vh;
+	background: var(--main-theme-background-color);
+	scroll-behavior: smooth;
+	overflow-x: hidden !important;
 }
 
 html {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }

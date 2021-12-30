@@ -1,6 +1,6 @@
 //PACKAGE IMPORTS
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
@@ -8,30 +8,30 @@ import { v4 as uuidv4 } from "uuid";
 /*----------------------------------------------------------------------------*/
 
 const Input = ({
-  type,
-  name,
-  placeholder,
-  value,
-  onChange,
-  classes,
-  groupClasses,
+	type,
+	name,
+	placeholder,
+	value,
+	onChange,
+	classes,
+	groupClasses
 }) => {
-  return (
-    <div className={`form__group field ${groupClasses}`}>
-      <input
-        type={type}
-        className={`form__field ${classes}`}
-        placeholder={placeholder}
-        name={name}
-        id={uuidv4()}
-        defaultValue={value}
-        onChange={onChange}
-      />
-      <label htmlFor={name} className="form__label text-capitalize">
-        {name}
-      </label>
-    </div>
-  );
+	return (
+		<div className={`form__group field ${groupClasses}`}>
+			<input
+				type={type}
+				className={`form__field ${classes}`}
+				placeholder={placeholder}
+				name={name}
+				id={uuidv4()}
+				defaultValue={value}
+				onChange={onChange}
+			/>
+			<label htmlFor={name} className="form__label text-capitalize">
+				{name}
+			</label>
+		</div>
+	);
 };
 
 export default Input;
