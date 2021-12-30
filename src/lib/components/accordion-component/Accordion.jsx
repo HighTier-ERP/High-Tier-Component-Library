@@ -4,26 +4,43 @@ import './Accordion.scss';
 
 const SingleAccordion = ({
 	children,
-	headerText,
-	headerClass,
+	accordionTitleText,
+	accordionTitleClass,
 	isExpanded,
-	headerIcon,
-	accordionWidth
+	accordionIcon,
+	accordionWidth,
+	accordionActionPosition
 }) => {
 	const [expanded, setExpanded] = useState(isExpanded);
 	return (
 		<article
 			tabIndex="0"
 			className={classNames(
-				'accordion-item',
+				'accordion-item b-b-default',
 				expanded ? 'active-accordion' : '',
 				accordionWidth
 			)}
 			onClick={() => setExpanded(!expanded)}
 		>
-			<span className="flex flex-row items-center pointer">
-				<span className="material-icons f-s-3rem">{headerIcon}</span>
-				<p className={headerClass}>{headerText}</p>
+			<span
+				className={classNames(
+					'flex flex-row items-center pointer',
+					accordionActionPosition === 'left'
+						? 'flex-direction-row-reverse justify-end'
+						: ''
+				)}
+			>
+				<span className="material-icons f-s-3rem">{accordionIcon}</span>
+				<p
+					className={classNames(
+						accordionActionPosition === 'left'
+							? 'pl-1rem'
+							: 'pr-1rem',
+						accordionTitleClass
+					)}
+				>
+					{accordionTitleText}
+				</p>
 				<button className="br-full block accordion-btn box-shadow pointer">
 					<span className="material-icons text-color-primary">
 						{!expanded ? 'add' : 'remove'}
@@ -37,13 +54,14 @@ const SingleAccordion = ({
 
 const GroupAccordion = ({
 	children,
-	headerText,
-	headerClass,
-	headerIcon,
+	accordionTitleText,
+	accordionTitleClass,
+	accordionIcon,
 	accordId,
 	activeId,
 	setActiveId,
-	accordionWidth
+	accordionWidth,
+	accordionActionPosition
 }) => {
 	const [expanded, setExpanded] = useState(false);
 
@@ -60,15 +78,31 @@ const GroupAccordion = ({
 		<article
 			tabIndex="0"
 			className={classNames(
-				'accordion-group-item',
+				'accordion-group-item b-b-default',
 				expanded ? 'active-accordion' : '',
 				accordionWidth
 			)}
 			onClick={handleExpand}
 		>
-			<span className="flex flex-row items-center pointer">
-				<span className="material-icons f-s-3rem">{headerIcon}</span>
-				<p className={headerClass}>{headerText}</p>
+			<span
+				className={classNames(
+					'flex flex-row items-center pointer',
+					accordionActionPosition === 'left'
+						? 'flex-direction-row-reverse justify-end'
+						: ''
+				)}
+			>
+				<span className="material-icons f-s-3rem">{accordionIcon}</span>
+				<p
+					className={classNames(
+						accordionActionPosition === 'left'
+							? 'pl-1rem'
+							: 'pr-1rem',
+						accordionTitleClass
+					)}
+				>
+					{accordionTitleText}
+				</p>
 				<button className="br-full block accordion-btn box-shadow pointer">
 					<span className="material-icons text-color-primary">
 						{!expanded ? 'add' : 'remove'}
@@ -82,35 +116,38 @@ const GroupAccordion = ({
 
 const Accordion = ({
 	children,
-	headerText,
-	headerClass,
+	accordionTitleText,
+	accordionTitleClass,
 	isExpanded,
-	headerIcon,
+	accordionIcon,
 	accordionType,
 	accordId,
 	activeId,
 	setActiveId,
-	accordionWidth
+	accordionWidth,
+	accordionActionPosition
 }) => {
 	return accordionType === 'single' ? (
 		<SingleAccordion
 			children={children}
-			headerText={headerText}
-			headerClass={headerClass}
+			accordionTitleText={accordionTitleText}
+			accordionTitleClass={accordionTitleClass}
 			isExpanded={isExpanded}
-			headerIcon={headerIcon}
+			accordionIcon={accordionIcon}
 			accordionWidth={accordionWidth}
+			accordionActionPosition={accordionActionPosition}
 		/>
 	) : (
 		<GroupAccordion
 			children={children}
-			headerText={headerText}
-			headerClass={headerClass}
-			headerIcon={headerIcon}
+			accordionTitleText={accordionTitleText}
+			accordionTitleClass={accordionTitleClass}
+			accordionIcon={accordionIcon}
 			accordId={accordId}
 			activeId={activeId}
 			setActiveId={setActiveId}
 			accordionWidth={accordionWidth}
+			accordionActionPosition={accordionActionPosition}
 		/>
 	);
 };

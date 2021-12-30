@@ -1,102 +1,105 @@
 .block {
-  @include block;
+	@include block;
 }
 
 .flex {
-  @include flex;
-  &-column {
-    @include flex-column;
-  }
-  &-md-row {
-    @include for-tablet-landscape-up {
-      @include flex-row;
-    }
-  }
-  &-row {
-    @include flex-row;
-  }
-  &-wrap {
-    flex-wrap: wrap !important;
-  }
+	@include flex;
+	&-column {
+		@include flex-column;
+	}
+	&-md-row {
+		@include for-tablet-landscape-up {
+			@include flex-row;
+		}
+	}
+	&-row {
+		@include flex-row;
+	}
+	&-wrap {
+		flex-wrap: wrap !important;
+	}
+	&-direction-row-reverse {
+		flex-direction: row-reverse !important;
+	}
 }
 
 .none {
-  &-md-down {
-    @include for-tablet-landscape-down {
-      display: none !important;
-    }
-  }
-  &-md-up {
-    @include for-tablet-landscape-up {
-      display: none !important;
-    }
-  }
+	&-md-down {
+		@include for-tablet-landscape-down {
+			display: none !important;
+		}
+	}
+	&-md-up {
+		@include for-tablet-landscape-up {
+			display: none !important;
+		}
+	}
 }
 
 .hidden {
-  &-md-down {
-    @include for-tablet-landscape-down {
-      visibility: hidden !important;
-    }
-  }
+	&-md-down {
+		@include for-tablet-landscape-down {
+			visibility: hidden !important;
+		}
+	}
 }
 
 .hide-for-laptops {
-  @media only screen and (max-width: 1728px) and (min-width: 1291px) {
-    display: none !important;
-  }
+	@media only screen and (max-width: 1728px) and (min-width: 1291px) {
+		display: none !important;
+	}
 }
 
 .object {
-  &-cover {
-    object-fit: cover !important;
-  }
-  &-contain {
-    object-fit: contain !important;
-  }
+	&-cover {
+		object-fit: cover !important;
+	}
+	&-contain {
+		object-fit: contain !important;
+	}
 }
 
 .opacity {
-  &-2 {
-    opacity: 0.2;
-  }
-  &-3 {
-    opacity: 0.3;
-  }
+	&-2 {
+		opacity: 0.2;
+	}
+	&-3 {
+		opacity: 0.3;
+	}
 
-  &-4 {
-    opacity: 0.4;
-  }
+	&-4 {
+		opacity: 0.4;
+	}
 
-  &-5 {
-    opacity: 0.5;
-  }
+	&-5 {
+		opacity: 0.5;
+	}
 
-  &-6 {
-    opacity: 0.6;
-  }
+	&-6 {
+		opacity: 0.6;
+	}
 
-  &-7 {
-    opacity: 0.7;
-  }
+	&-7 {
+		opacity: 0.7;
+	}
 
-  &-8 {
-    opacity: 0.8;
-  }
+	&-8 {
+		opacity: 0.8;
+	}
 
-  &-9 {
-    opacity: 0.9;
-  }
+	&-9 {
+		opacity: 0.9;
+	}
 }
 
 .overflow {
-  &-y {
-    overflow: scroll !important;
-  }
-  &-hidden {
-    overflow: hidden !important;
-  }
-  &-x-hidden {
-    overflow-x: hidden !important;
-  }
+	&-y {
+		overflow: scroll !important;
+	}
+	&-hidden {
+		overflow: hidden !important;
+	}
+	&-x-hidden {
+		overflow-x: hidden !important;
+	}
 }

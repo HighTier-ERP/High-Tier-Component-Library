@@ -9,6 +9,12 @@ Object.defineProperty(exports, "Accordion", {
     return _Accordion.default;
   }
 });
+Object.defineProperty(exports, "Calendar", {
+  enumerable: true,
+  get: function get() {
+    return _Calendar.default;
+  }
+});
 Object.defineProperty(exports, "Input", {
   enumerable: true,
   get: function get() {
@@ -29,6 +35,8 @@ Object.defineProperty(exports, "TextArea", {
 });
 
 var _Accordion = _interopRequireDefault(require("./components/accordion-component/Accordion"));
+
+var _Calendar = _interopRequireDefault(require("./components/calendar-component/Calendar"));
 
 var _Input = _interopRequireDefault(require("./components/input-component/Input"));
 
