@@ -13,7 +13,6 @@ import {
 	isSameDay,
 	toDate
 } from 'date-fns';
-import './Calendar.scss';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/

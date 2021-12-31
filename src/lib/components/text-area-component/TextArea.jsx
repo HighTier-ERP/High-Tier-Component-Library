@@ -1,6 +1,5 @@
 //PACKAGE IMPORTS
 import React from 'react';
-import './TextArea.scss';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
