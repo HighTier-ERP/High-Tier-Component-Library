@@ -1,3 +1,6 @@
+//PACKAGE IMPORTS
+import React from 'react';
+
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
 // Default site configurable logo. Has a guard clause to check if an svg 

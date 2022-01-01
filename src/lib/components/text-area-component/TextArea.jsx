@@ -1,3 +1,6 @@
+//PACKAGE IMPORTS
+import React from 'react';
+
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
 // Reusable textarea component to speed up form development.
