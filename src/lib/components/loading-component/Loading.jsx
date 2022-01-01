@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
-//Default Application Loading Component
+// Default Application Loading Component. todo: Need to move styles to global 
+// style sheet for css variable classes. 
 /*----------------------------------------------------------------------------*/
 
 const loadingContainer = {

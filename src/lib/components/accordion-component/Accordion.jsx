@@ -1,5 +1,13 @@
-import React, { useState, useEffect } from 'react';
+//PACKAGE IMPORTS
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+
+//COMPONENT DESCRIPTION
+/*----------------------------------------------------------------------------*/
+// Component that allows for single dropdown handling and group list Information
+// like accordion lists. Highly customizable with props for text and position.
+// Uses atomic css, utility, and css props for theme handling. 
+/*----------------------------------------------------------------------------*/
 
 const SingleAccordion = ({
 	children,

@@ -1,9 +1,9 @@
-import React from 'react';
+//PACKAGE IMPORTS
 import { motion, AnimatePresence } from 'framer-motion';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
-// Wrapper for animated components in microsite templates
+// Wrapper for animated components. No need to import motion or AnimatePresence.
 /*----------------------------------------------------------------------------*/
 
 const MotionDiv = ({

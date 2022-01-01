@@ -50,6 +50,8 @@ var _Input = _interopRequireDefault(require("./components/input-component/Input"
 
 var _MotionDiv = _interopRequireDefault(require("./components/motion-div-component/MotionDiv"));
 
+var _SiteLogo = _interopRequireDefault(require("./components/site-logo-component/SiteLogo"));
+
 var _TextArea = _interopRequireDefault(require("./components/text-area-component/TextArea"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
