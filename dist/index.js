@@ -33,6 +33,12 @@ Object.defineProperty(exports, "MotionDiv", {
     return _MotionDiv.default;
   }
 });
+Object.defineProperty(exports, "SiteLogo", {
+  enumerable: true,
+  get: function get() {
+    return _SiteLogo.default;
+  }
+});
 Object.defineProperty(exports, "TextArea", {
   enumerable: true,
   get: function get() {
