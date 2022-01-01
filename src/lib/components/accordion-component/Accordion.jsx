@@ -6,7 +6,7 @@ import classNames from 'classnames';
 /*----------------------------------------------------------------------------*/
 // Component that allows for single dropdown handling and group list Information
 // like accordion lists. Highly customizable with props for text and position.
-// Uses atomic css, utility, and css props for theme handling. 
+// Uses atomic css, utility, and css props for theme handling.
 /*----------------------------------------------------------------------------*/
 
 const SingleAccordion = ({
@@ -27,6 +27,7 @@ const SingleAccordion = ({
 				expanded ? 'active-accordion' : '',
 				accordionWidth
 			)}
+			aria-expanded={expanded}
 			onClick={() => setExpanded(!expanded)}
 		>
 			<span
@@ -48,13 +49,16 @@ const SingleAccordion = ({
 				>
 					{accordionTitleText}
 				</p>
-				<button className="br-full block accordion-btn box-shadow pointer">
+				<button
+					className="br-full block accordion-btn box-shadow pointer"
+					aria-expanded={expanded}
+				>
 					<span className="material-icons text-color-primary">
 						{!expanded ? 'add' : 'remove'}
 					</span>
 				</button>
 			</span>
-			{expanded && children}
+			<div>{expanded && children}</div>
 		</article>
 	);
 };
@@ -90,6 +94,7 @@ const GroupAccordion = ({
 				accordionWidth
 			)}
 			onClick={handleExpand}
+			aria-expanded={expanded}
 		>
 			<span
 				className={classNames(
@@ -110,7 +115,10 @@ const GroupAccordion = ({
 				>
 					{accordionTitleText}
 				</p>
-				<button className="br-full block accordion-btn box-shadow pointer">
+				<button
+					className="br-full block accordion-btn box-shadow pointer"
+					aria-expanded={expanded}
+				>
 					<span className="material-icons text-color-primary">
 						{!expanded ? 'add' : 'remove'}
 					</span>
