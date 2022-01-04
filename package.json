@@ -2,7 +2,7 @@
 	"name": "high-tier-component-library",
 	"description": "React components for High App Development",
 	"author": "Jack Wuerfel and Trevor Wuerfel",
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"keywords": [
 		"react",
 		"components",
