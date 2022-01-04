@@ -27,6 +27,7 @@ const SingleAccordion = ({
 				expanded ? 'active-accordion' : '',
 				accordionWidth
 			)}
+			role="button"
 			aria-expanded={expanded}
 			onClick={() => setExpanded(!expanded)}
 		>

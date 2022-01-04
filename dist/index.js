@@ -33,6 +33,30 @@ Object.defineProperty(exports, "MotionDiv", {
     return _MotionDiv.default;
   }
 });
+Object.defineProperty(exports, "NotInProduction", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.NotInProduction;
+  }
+});
+Object.defineProperty(exports, "OnlyInLocal", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.OnlyInLocal;
+  }
+});
+Object.defineProperty(exports, "OnlyInProduction", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.OnlyInProduction;
+  }
+});
+Object.defineProperty(exports, "OnlyInStaging", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.OnlyInStaging;
+  }
+});
 Object.defineProperty(exports, "SiteLogo", {
   enumerable: true,
   get: function get() {
@@ -43,6 +67,30 @@ Object.defineProperty(exports, "TextArea", {
   enumerable: true,
   get: function get() {
     return _TextArea.default;
+  }
+});
+Object.defineProperty(exports, "useIsLocal", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.useIsLocal;
+  }
+});
+Object.defineProperty(exports, "useIsNotProduction", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.useIsNotProduction;
+  }
+});
+Object.defineProperty(exports, "useIsProduction", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.useIsProduction;
+  }
+});
+Object.defineProperty(exports, "useIsStaging", {
+  enumerable: true,
+  get: function get() {
+    return _Environments.useIsStaging;
   }
 });
 
@@ -59,5 +107,7 @@ var _MotionDiv = _interopRequireDefault(require("./components/motion-div-compone
 var _SiteLogo = _interopRequireDefault(require("./components/site-logo-component/SiteLogo"));
 
 var _TextArea = _interopRequireDefault(require("./components/text-area-component/TextArea"));
+
+var _Environments = require("./components/environment-component/Environments");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
