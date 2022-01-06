@@ -464,6 +464,16 @@
 		margin-left: 50px;
 		margin-right: 50px;
 	}
+	&-1rem {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	&-lg-1rem {
+		@include media-breakpoint-up(lg) {
+			margin-left: 1rem !important;
+			margin-right: 1rem !important;
+		}
+	}
 }
 
 .my {
@@ -490,7 +500,7 @@
 		margin-bottom: 50px;
 	}
 	&-75px {
-		margin-top: 75px!important;
-		margin-bottom: 75px!important;
+		margin-top: 75px !important;
+		margin-bottom: 75px !important;
 	}
 }

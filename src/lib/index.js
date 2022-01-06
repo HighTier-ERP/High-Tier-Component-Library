@@ -39,6 +39,16 @@ export {
 } from './components/environment-component/Environments';
 
 export {
+	ShowForMediumAndUp,
+	ShowForSmallAndDown,
+	ShowForLargeAndUp,
+	ShowForLargeAndDown,
+	ShowForMediumAndDown,
+	ShowForCustomLarge,
+	ShowForCustomLargeDown
+} from './components/responsive-component/Responsive';
+
+export {
 	ArrowCircleIcon,
 	Calculator,
 	ChatIcon,
