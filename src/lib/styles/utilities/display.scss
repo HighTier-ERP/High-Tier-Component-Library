@@ -24,6 +24,7 @@
 }
 
 .none {
+	display: none !important;
 	&-md-down {
 		@include for-tablet-landscape-down {
 			display: none !important;

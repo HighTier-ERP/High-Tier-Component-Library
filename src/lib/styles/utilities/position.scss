@@ -1,7 +1,4 @@
 // Position Utilities
-.position-sm-relative {
-	position: relative !important;
-}
 
 .fixed {
 	position: fixed !important;
@@ -9,21 +6,22 @@
 
 .relative {
 	position: relative !important;
+	&-sm {
+		position: relative !important;
+	}
 }
 
 .absolute {
 	position: absolute !important;
-}
-
-.absolute-md-up {
-	@include for-tablet-landscape-up {
-		position: absolute !important;
+	&-md-up {
+		@include for-tablet-landscape-up {
+			position: absolute !important;
+		}
 	}
-}
-
-.position-tablet-absolute {
-	@include for-xl-desktop-up {
-		position: absolute !important;
+	&-tablet {
+		@include for-xl-desktop-up {
+			position: absolute !important;
+		}
 	}
 }
 
@@ -43,6 +41,10 @@
 	&-end {
 		-webkit-justify-content: flex-end !important;
 		justify-content: flex-end !important;
+	}
+	&-start {
+		-webkit-justify-content: flex-start !important;
+		justify-content: flex-start !important;
 	}
 }
 
@@ -69,11 +71,6 @@
 }
 
 //Bottom Utility Classes
-
-.bottom-corner {
-	bottom: 20px !important;
-	right: 20px !important;
-}
 
 .bottom {
 	&-0 {
@@ -103,6 +100,11 @@
 
 	&-n-80px {
 		bottom: -80px;
+	}
+
+	&-corner {
+		bottom: 20px !important;
+		right: 20px !important;
 	}
 }
 
