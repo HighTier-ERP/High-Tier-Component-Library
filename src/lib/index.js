@@ -35,7 +35,8 @@ export {
 	SiteLogo,
 	TextArea,
 	RadioBtn,
-	Select
+	Select,
+	ToggleSwitch
 };
 
 // Flags - Hooks and Components
@@ -122,4 +123,4 @@ export {
 } from './icons';
 
 export { useInput } from './hooks/useInput';
-export { useTogggle } from './hooks/useToogle';
+export { useToggle } from './hooks';
