@@ -5,6 +5,8 @@
 
 import Accordion from './components/accordion-component/Accordion';
 import Avatar from './components/identity/avatar-component/Avatar';
+import AvatarSupabase from './components/identity/avatar-supabase-component/AvatarSupabase';
+import Button from './components/button-component/Button';
 import Calendar from './components/calendar-component/Calendar';
 import CheckBox from './components/inputs/checkbox-component/CheckBox';
 import DocumentCard from './components/documentation/document-card-component/DocumentCard';
@@ -22,7 +24,9 @@ import ToggleSwitch from './components/inputs/toggle-switch-component/ToggleSwit
 
 export {
 	Accordion,
+	AvatarSupabase,
 	Avatar,
+	Button,
 	Calendar,
 	CheckBox,
 	DocumentCard,
