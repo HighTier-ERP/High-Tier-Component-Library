@@ -10,11 +10,12 @@ import Button from './components/button-component/Button';
 import Calendar from './components/calendar-component/Calendar';
 import CheckBox from './components/inputs/checkbox-component/CheckBox';
 import DocumentCard from './components/documentation/document-card-component/DocumentCard';
-import DynamicIcon from './components/dynamic-icon-component/DynamicIcon';
-import Loading from './components/loading-component/Loading';
+import DynamicIcon from './components/visual-communication/dynamic-icon-component/DynamicIcon';
+import Loading from './components/utilities/loading-component/Loading';
 import DateInput from './components/inputs/date-input-component/DateInput';
 import Input from './components/inputs/input-component/Input';
-import MotionDiv from './components/motion-div-component/MotionDiv';
+import ElementWithBg from './components/layout/element-with-bg-component/ElementWithBg';
+import MotionDiv from './components/layout/motion-div-component/MotionDiv';
 import PackageLogo from './components/identity/package-logo-component/PackageLogo';
 import RadioBtn from './components/inputs/radio-btn-component/RadioBtn';
 import Select from './components/inputs/select-component/Select';
@@ -24,14 +25,15 @@ import ToggleSwitch from './components/inputs/toggle-switch-component/ToggleSwit
 
 export {
 	Accordion,
-	AvatarSupabase,
 	Avatar,
+	AvatarSupabase,
 	Button,
 	Calendar,
 	CheckBox,
 	DocumentCard,
 	DynamicIcon,
 	DateInput,
+	ElementWithBg,
 	Input,
 	Loading,
 	MotionDiv,
@@ -56,7 +58,7 @@ export {
 	useIsProduction,
 	useIsStaging,
 	useIsLocal
-} from './components/environment-component/Environments';
+} from './components/utilities/environment-component/Environments';
 
 export {
 	ShowForMediumAndUp,
@@ -66,7 +68,7 @@ export {
 	ShowForMediumAndDown,
 	ShowForCustomLarge,
 	ShowForCustomLargeDown
-} from './components/responsive-component/Responsive';
+} from './components/utilities/responsive-component/Responsive';
 
 export {
 	ArrowCircleIcon,

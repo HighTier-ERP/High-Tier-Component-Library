@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Avatar({ url, size, onUpload, editUser, supabase }) {
+export default function AvatarSupabase({ url, size, onUpload, editUser, supabase }) {
 	const [avatarUrl, setAvatarUrl] = useState(null);
 	const [uploading, setUploading] = useState(false);
 

@@ -159,6 +159,12 @@ Object.defineProperty(exports, "DynamicIcon", {
     return _DynamicIcon.default;
   }
 });
+Object.defineProperty(exports, "ElementWithBg", {
+  enumerable: true,
+  get: function get() {
+    return _ElementWithBg.default;
+  }
+});
 Object.defineProperty(exports, "EmailIcon", {
   enumerable: true,
   get: function get() {
@@ -558,15 +564,17 @@ var _CheckBox = _interopRequireDefault(require("./components/inputs/checkbox-com
 
 var _DocumentCard = _interopRequireDefault(require("./components/documentation/document-card-component/DocumentCard"));
 
-var _DynamicIcon = _interopRequireDefault(require("./components/dynamic-icon-component/DynamicIcon"));
+var _DynamicIcon = _interopRequireDefault(require("./components/visual-communication/dynamic-icon-component/DynamicIcon"));
 
-var _Loading = _interopRequireDefault(require("./components/loading-component/Loading"));
+var _Loading = _interopRequireDefault(require("./components/utilities/loading-component/Loading"));
 
 var _DateInput = _interopRequireDefault(require("./components/inputs/date-input-component/DateInput"));
 
 var _Input = _interopRequireDefault(require("./components/inputs/input-component/Input"));
 
-var _MotionDiv = _interopRequireDefault(require("./components/motion-div-component/MotionDiv"));
+var _ElementWithBg = _interopRequireDefault(require("./components/layout/element-with-bg-component/ElementWithBg"));
+
+var _MotionDiv = _interopRequireDefault(require("./components/layout/motion-div-component/MotionDiv"));
 
 var _PackageLogo = _interopRequireDefault(require("./components/identity/package-logo-component/PackageLogo"));
 
@@ -580,9 +588,9 @@ var _TextArea = _interopRequireDefault(require("./components/inputs/text-area-co
 
 var _ToggleSwitch = _interopRequireDefault(require("./components/inputs/toggle-switch-component/ToggleSwitch"));
 
-var _Environments = require("./components/environment-component/Environments");
+var _Environments = require("./components/utilities/environment-component/Environments");
 
-var _Responsive = require("./components/responsive-component/Responsive");
+var _Responsive = require("./components/utilities/responsive-component/Responsive");
 
 var _icons = require("./icons");
 

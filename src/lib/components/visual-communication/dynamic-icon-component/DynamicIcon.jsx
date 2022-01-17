@@ -50,7 +50,7 @@ import {
 	TrashIcon,
 	UserGroupIcon,
 	UserAddIcon
-} from '../../icons';
+} from '../../../icons';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
