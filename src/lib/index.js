@@ -15,6 +15,7 @@ import Loading from './components/utilities/loading-component/Loading';
 import DateInput from './components/inputs/date-input-component/DateInput';
 import Input from './components/inputs/input-component/Input';
 import ElementWithBg from './components/layout/element-with-bg-component/ElementWithBg';
+import Marquee from './components/visual-communication/marquee-component/Marquee';
 import MotionDiv from './components/layout/motion-div-component/MotionDiv';
 import PackageLogo from './components/identity/package-logo-component/PackageLogo';
 import RadioBtn from './components/inputs/radio-btn-component/RadioBtn';
@@ -36,6 +37,7 @@ export {
 	ElementWithBg,
 	Input,
 	Loading,
+	Marquee,
 	MotionDiv,
 	PackageLogo,
 	SiteLogo,

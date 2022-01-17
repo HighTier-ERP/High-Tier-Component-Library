@@ -255,6 +255,12 @@ Object.defineProperty(exports, "MailOpenIcon", {
     return _icons.MailOpenIcon;
   }
 });
+Object.defineProperty(exports, "Marquee", {
+  enumerable: true,
+  get: function get() {
+    return _Marquee.default;
+  }
+});
 Object.defineProperty(exports, "MenuIcon", {
   enumerable: true,
   get: function get() {
@@ -573,6 +579,8 @@ var _DateInput = _interopRequireDefault(require("./components/inputs/date-input-
 var _Input = _interopRequireDefault(require("./components/inputs/input-component/Input"));
 
 var _ElementWithBg = _interopRequireDefault(require("./components/layout/element-with-bg-component/ElementWithBg"));
+
+var _Marquee = _interopRequireDefault(require("./components/visual-communication/marquee-component/Marquee"));
 
 var _MotionDiv = _interopRequireDefault(require("./components/layout/motion-div-component/MotionDiv"));
 
