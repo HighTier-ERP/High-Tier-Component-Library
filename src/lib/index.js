@@ -3,11 +3,12 @@
 // Export for library components
 /*----------------------------------------------------------------------------*/
 
-import Accordion from './components/accordion-component/Accordion';
+import Accordion from './components/utilities/accordion-component/Accordion';
 import Avatar from './components/identity/avatar-component/Avatar';
 import AvatarSupabase from './components/identity/avatar-supabase-component/AvatarSupabase';
-import Button from './components/button-component/Button';
-import Calendar from './components/calendar-component/Calendar';
+import Auth from './components/auth/auth-component/Auth';
+import Button from './components/utilities/button-component/Button';
+import Calendar from './components/utilities/calendar-component/Calendar';
 import CheckBox from './components/inputs/checkbox-component/CheckBox';
 import DocumentCard from './components/documentation/document-card-component/DocumentCard';
 import DynamicIcon from './components/visual-communication/dynamic-icon-component/DynamicIcon';
@@ -25,6 +26,7 @@ import TextArea from './components/inputs/text-area-component/TextArea';
 import ToggleSwitch from './components/inputs/toggle-switch-component/ToggleSwitch';
 
 export {
+	Auth,
 	Accordion,
 	Avatar,
 	AvatarSupabase,

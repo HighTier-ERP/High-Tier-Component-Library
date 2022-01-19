@@ -527,6 +527,12 @@
 			flex: 0 0 41.33%;
 			max-width: 41.33%;
 		}
+		@include for-tablet-landscape-down {
+			-webkit-box-flex: 0 0 100%;
+			-ms-flex: 0 0 100%;
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
 	}
 	&-6 {
 		padding: {
@@ -558,7 +564,7 @@
 			flex: 0 0 100%;
 			max-width: 100%;
 		}
-		@include for-desktop-up {
+		@include for-tablet-landscape-up {
 			-webkit-box-flex: 0 0 58.33%;
 			-ms-flex: 0 0 58.33%;
 			flex: 0 0 58.33%;

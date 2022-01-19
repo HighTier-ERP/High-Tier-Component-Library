@@ -28,7 +28,6 @@ const SingleAccordion = ({
 				accordionWidth
 			)}
 			role="button"
-			aria-expanded={expanded}
 			onClick={() => setExpanded(!expanded)}
 		>
 			<span
@@ -59,7 +58,7 @@ const SingleAccordion = ({
 					</span>
 				</button>
 			</span>
-			<div>{expanded && children}</div>
+			<>{expanded && children}</>
 		</article>
 	);
 };

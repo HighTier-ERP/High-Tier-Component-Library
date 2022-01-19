@@ -15,6 +15,12 @@ Object.defineProperty(exports, "ArrowCircleIcon", {
     return _icons.ArrowCircleIcon;
   }
 });
+Object.defineProperty(exports, "Auth", {
+  enumerable: true,
+  get: function get() {
+    return _Auth.default;
+  }
+});
 Object.defineProperty(exports, "Avatar", {
   enumerable: true,
   get: function get() {
@@ -556,15 +562,17 @@ Object.defineProperty(exports, "useToggle", {
   }
 });
 
-var _Accordion = _interopRequireDefault(require("./components/accordion-component/Accordion"));
+var _Accordion = _interopRequireDefault(require("./components/utilities/accordion-component/Accordion"));
 
 var _Avatar = _interopRequireDefault(require("./components/identity/avatar-component/Avatar"));
 
 var _AvatarSupabase = _interopRequireDefault(require("./components/identity/avatar-supabase-component/AvatarSupabase"));
 
-var _Button = _interopRequireDefault(require("./components/button-component/Button"));
+var _Auth = _interopRequireDefault(require("./components/auth/auth-component/Auth"));
 
-var _Calendar = _interopRequireDefault(require("./components/calendar-component/Calendar"));
+var _Button = _interopRequireDefault(require("./components/utilities/button-component/Button"));
+
+var _Calendar = _interopRequireDefault(require("./components/utilities/calendar-component/Calendar"));
 
 var _CheckBox = _interopRequireDefault(require("./components/inputs/checkbox-component/CheckBox"));
 

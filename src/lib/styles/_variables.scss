@@ -41,6 +41,7 @@ $grayDefault: #cccccc;
 $whiteDefault: #ffffff;
 $blueDefault: #1a8fff;
 $inputColorDefault: #9b9b9b;
+$yellowDefault: #ffd800;
 
 $grid-breakpoints: (
 	xs: 0,
@@ -76,4 +77,5 @@ $grid-breakpoints: (
 	--main-theme-border-color-default: #{$gray500};
 	--main-theme-input-border-bottom: #{$inputColorDefault};
 	--main-theme-input-text-color: #{$inputColorDefault};
+	--main-theme-yellow-1: #{$yellowDefault};
 }

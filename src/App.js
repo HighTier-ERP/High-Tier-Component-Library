@@ -7,8 +7,7 @@ import {
 	SiteLogo,
 	CheckBox,
 	RadioBtn,
-	DocumentCard,
-	DateInput
+	DocumentCard
 } from './lib';
 
 function App() {

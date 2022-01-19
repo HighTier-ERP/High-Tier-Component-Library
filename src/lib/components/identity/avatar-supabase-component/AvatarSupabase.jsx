@@ -6,7 +6,7 @@ export default function AvatarSupabase({ url, size, onUpload, editUser, supabase
 
 	useEffect(() => {
 		if (url) downloadImage(url);
-	}, [url]);
+	}, [url, downloadImage()]);
 
 	async function downloadImage(path) {
 		try {
