@@ -1,5 +1,6 @@
 //PACKAGE IMPORTS
 import React, { useContext, useState, useEffect } from 'react';
+import classNames from 'classnames';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import Input from '../../inputs/input-component/Input';
@@ -16,23 +17,20 @@ const FadeUp = {
 };
 
 const AlertContent = ({ message }) => {
-	return message.content && (
+	return (
+		message.content && (
 			<p
 				className={`${
-					message.type === 'error'
-						? 'text-pink'
-						: 'text-green'
+					message.type === 'error' ? 'text-pink' : 'text-green'
 				} border ${
-					message.type === 'error'
-						? 'border-pink'
-						: 'border-green'
+					message.type === 'error' ? 'border-pink' : 'border-green'
 				} py-30px mb-10px`}
 			>
 				{message.content}
 			</p>
-		)}
-	)
-}
+		)
+	);
+};
 
 const SignUpAnchor = ({ router, classes }) => {
 	function goToOnboading() {
@@ -49,12 +47,98 @@ const SignUpAnchor = ({ router, classes }) => {
 };
 
 const PageTitle = ({ hidePageTitle }) => {
-	return !hidePageTitle && (
-		<div className="pb-200px">
-			<h1 className="py-20px"> Login </h1>
-			<p>{authMessaging}</p>
+	return (
+		!hidePageTitle && (
+			<div className="pb-200px">
+				<h1 className="py-20px"> Login </h1>
+				<p>{authMessaging}</p>
+			</div>
+		)
+	);
+};
+
+const Inputs = ({
+	email,
+	handleEmail,
+	password,
+	handlePassword,
+	showPasswordInput
+}) => {
+	return (
+		<>
+			<Input
+				placeholder="Email"
+				name="email"
+				type="email"
+				autoComplete="off"
+				value={email}
+				onChange={handleEmail}
+				classes="mb-20px"
+			/>
+
+			{showPasswordInput ? (
+				<>
+					<Input
+						placeholder="Password"
+						name="password"
+						type="password"
+						autoComplete="off"
+						value={password}
+						onChange={handlePassword}
+						classes="mb-20px"
+					/>
+					<Button
+						classes="mt-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
+						label="Login"
+						type="submit"
+						disabled={
+							email === null ||
+							password === null ||
+							email === '' ||
+							password === ''
+						}
+					/>
+				</>
+			) : (
+				<Button
+					classes="my-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
+					label="Send Magic Link"
+					type="submit"
+					disabled={email === null || email === '' || !email.length}
+				/>
+			)}
+		</>
+	);
+};
+
+const ShowPasswordInput = ({
+	showPasswordInput,
+	setPassword,
+	setShowPasswordInput
+}) => {
+	return (
+		<div
+			className="pointer pb-20px"
+			onClick={() => {
+				if (showPasswordInput) setPassword('');
+				setShowPasswordInput(!showPasswordInput);
+			}}
+		>
+			{`Or sign in with ${
+				showPasswordInput ? 'magic link' : 'password'
+			}.`}
 		</div>
-	)
+	);
+};
+
+const WelcomeContent = ({ welcomeMessage, welcomeMessageSubContent }) => {
+	return (
+		<>
+			<h2 className="pt-20px">{welcomeMessage}</h2>
+
+			<h3 className="py-20px">{welcomeMessageSubContent}</h3>
+		</>
+	);
 };
 
 const Auth = ({
@@ -65,7 +149,10 @@ const Auth = ({
 	router,
 	authMessaging,
 	layoutFormat,
-	hidePageTitle
+	hidePageTitle,
+	welcomeMessage,
+	welcomeMessageSubContent,
+	maxWidthClass
 }) => {
 	const { isLoggedIn, setIsLoggedIn } = useContext(sessionContext);
 	const [showPasswordInput, setShowPasswordInput] = useState(false);
@@ -151,83 +238,52 @@ const Auth = ({
 							onSubmit={handleSignin}
 							className="flex min-h-680px h-full"
 						>
-							<div className="flex flex-column mx-auto w-full max-w-450px pt-100px pt-80px-md-down">
-							<AlertContent message={message} />
-								<h2 className="py-20px">
-									Good to see you again!
-								</h2>
+							<div
+								className={classNames(
+									maxWidthClass,
+									'flex flex-column mx-auto w-full pt-100px pt-80px-md-down'
+								)}
+							>
+								<AlertContent message={message} />
 
-								<h3 className="pb-20px">Please sign in</h3>
-
-								<div
-									className="pointer pb-20px"
-									onClick={() => {
-										if (showPasswordInput) setPassword('');
-										setShowPasswordInput(
-											!showPasswordInput
-										);
-										setMessage({});
-									}}
-								>
-									{`Or sign in with ${
-										showPasswordInput
-											? 'magic link'
-											: 'password'
-									}.`}
-								</div>
-								<Input
-									placeholder="Email"
-									name="email"
-									type="email"
-									autoComplete="off"
-									value={email}
-									onChange={handleEmail}
-									classes="mb-20px"
+								<WelcomeContent
+									welcomeMessage={welcomeMessage}
+									welcomeMessageSubContent={
+										welcomeMessageSubContent
+									}
 								/>
 
-								{showPasswordInput ? (
-									<>
-										<Input
-											placeholder="Password"
-											name="password"
-											type="password"
-											autoComplete="off"
-											value={password}
-											onChange={handlePassword}
-											classes="mb-20px"
-										/>
-										<Button
-											classes="mt-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
-											label="Login"
-											type="submit"
-											disabled={
-												email === null ||
-												password === null ||
-												email === '' ||
-												password === ''
-											}
-										/>
-									</>
-								) : (
-									<Button
-										classes="mt-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
-										label="Send Magic Link"
-										type="submit"
-										disabled={
-											email === null ||
-											email === '' ||
-											!email.length
-										}
-									/>
-								)}
-								<SignUpAnchor router={router} classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column" />
+								<ShowPasswordInput
+									setPassword={setPassword}
+									setShowPasswordInput={setShowPasswordInput}
+									showPasswordInput={showPasswordInput}
+								/>
+
+								<Inputs
+									email={email}
+									handleEmail={handleEmail}
+									password={password}
+									handlePassword={handlePassword}
+									showPasswordInput={showPasswordInput}
+								/>
+
+								<SignUpAnchor
+									router={router}
+									classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column"
+								/>
 							</div>
 						</form>
 					</div>
 					<div className="column-5 h-full flex flex-column items-center relative none-md-down">
 						<div className="min-h-680px pt-200px mt-20px br-24px w-full px-30px bg-yellow-1">
-							<PageTitle hidePageTitle={hidePageTitle} authMessaging={authMessaging} />
-							<SignUpAnchor router={router} classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column" />
+							<PageTitle
+								hidePageTitle={hidePageTitle}
+								authMessaging={authMessaging}
+							/>
+							<SignUpAnchor
+								router={router}
+								classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column"
+							/>
 						</div>
 					</div>
 				</div>
@@ -249,79 +305,45 @@ const Auth = ({
 					backgroundSize: 'cover'
 				}}
 			>
-				<div className="br-24px flex flex-column items-center mt-20px relative max-w-720px mx-auto none-md-dow p-50px bg-yellow-1 box-shadow">
-					<PageTitle hidePageTitle={hidePageTitle} authMessaging={authMessaging} />
+				<div
+					className={classNames(
+						maxWidthClass,
+						'br-24px flex flex-column items-center mt-20px relative mx-auto none-md-dow p-50px bg-yellow-1 box-shadow'
+					)}
+				>
+					<PageTitle
+						hidePageTitle={hidePageTitle}
+						authMessaging={authMessaging}
+					/>
 					<form
 						onSubmit={handleSignin}
 						className="flex flex-column w-full bg-black-1 br-8px pt-30px pb-20px px-50px"
 					>
 						<AlertContent message={message} />
 
-						<h2>{welcomeMessage}</h2>
-
-						<h3 className="pb-20px">
-							{welcomeMessageSubContent}
-						</h3>
-
-						<div
-							className="pointer pb-20px"
-							onClick={() => {
-								if (showPasswordInput) setPassword('');
-								setShowPasswordInput(!showPasswordInput);
-								setMessage({});
-							}}
-						>
-							{`Or sign in with ${
-								showPasswordInput ? 'magic link' : 'password'
-							}.`}
-						</div>
-						<Input
-							placeholder="Email"
-							name="email"
-							type="email"
-							autoComplete="off"
-							value={email}
-							onChange={handleEmail}
-							classes="mb-20px"
+						<WelcomeContent
+							welcomeMessage={welcomeMessage}
+							welcomeMessageSubContent={welcomeMessageSubContent}
 						/>
 
-						{showPasswordInput ? (
-							<>
-								<Input
-									placeholder="Password"
-									name="password"
-									type="password"
-									autoComplete="off"
-									value={password}
-									onChange={handlePassword}
-									classes="mb-20px"
-								/>
-								<Button
-									classes="my-20px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
-									label="Login"
-									type="submit"
-									disabled={
-										email === null ||
-										password === null ||
-										email === '' ||
-										password === ''
-									}
-								/>
-							</>
-						) : (
-							<Button
-								classes="my-20px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer f-w-800 bw-1px"
-								label="Send Magic Link"
-								type="submit"
-								disabled={
-									email === null ||
-									email === '' ||
-									!email.length
-								}
-							/>
-						)}
+						<ShowPasswordInput
+							setPassword={setPassword}
+							setShowPasswordInput={setShowPasswordInput}
+							showPasswordInput={showPasswordInput}
+						/>
+
+						<Inputs
+							email={email}
+							handleEmail={handleEmail}
+							password={password}
+							handlePassword={handlePassword}
+							showPasswordInput={showPasswordInput}
+						/>
 					</form>
-					<SignUpAnchor router={router} classes="pointer mt-30px relative bottom-0px py-20px px-50px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column"/>
+					<SignUpAnchor
+						router={router}
+						classes="pointer mt-30px relative bottom-0px py-20px px-50px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column"
+					/>
 				</div>
 			</div>
 		</MotionDiv>
