@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+
+//INTERNAL IMPORTS
 import Input from '../../inputs/input-component/Input';
 import Button from '../../utilities/button-component/Button';
 import MotionDiv from '../../layout/motion-div-component/MotionDiv';
@@ -12,33 +14,8 @@ import MotionDiv from '../../layout/motion-div-component/MotionDiv';
 //Sign up page for react app. Is Site configurable.
 /*----------------------------------------------------------------------------*/
 
-const AlertContent = ({ message }) => {
-	return message ? (
-		<p
-			className={`${
-				message.type === 'error' ? 'text-pink' : 'text-green'
-			} border ${
-				message.type === 'error' ? 'border-pink' : 'border-green'
-			} py-30px mb-10px`}
-		>
-			{message.content}
-		</p>
-	) : null;
-};
-
 const FadeUp = {
 	hidden: { opacity: 0, y: 20, x: 0 }
-};
-
-const PageTitle = ({ hidePageTitle, authMessaging }) => {
-	return (
-		!hidePageTitle && (
-			<div className="pointer mb-20px">
-				<h1 className="py-20px"> Sign Up </h1>
-				<p>{authMessaging}</p>
-			</div>
-		)
-	);
 };
 
 const RegisterContent = ({ registerMessage, registerMessageSubContent }) => {
@@ -47,6 +24,39 @@ const RegisterContent = ({ registerMessage, registerMessageSubContent }) => {
 			<h2 className="pt-20px">{registerMessage}</h2>
 			<h3 className="py-20px">{registerMessageSubContent}</h3>
 		</>
+	);
+};
+
+const AlertContent = ({ message }) => {
+	return message.content ? (
+		<span className="alert-content flex flex-row justify-center">
+			<p
+				className={classNames(
+					'py-30px mb-10px border',
+					message.type === 'error' ? 'text-pink' : 'text-green',
+					message.type === 'error' ? 'border-pink' : 'border-green'
+				)}
+			>
+				{message.content}
+			</p>
+		</span>
+	) : null;
+};
+
+const PageTitle = ({ hidePageTitle, authMessaging, authComponent }) => {
+	return (
+		!hidePageTitle && (
+			<div
+				className={classNames(
+					authComponent === 'login' ? 'pb-200px' : 'mb-20px'
+				)}
+			>
+				<h1 className="py-20px">
+					{authComponent === 'login' ? 'Login' : 'Sign Up'}
+				</h1>
+				<p>{authMessaging}</p>
+			</div>
+		)
 	);
 };
 
@@ -145,6 +155,7 @@ const Onboarding = ({
 					<PageTitle
 						hidePageTitle={hidePageTitle}
 						authMessaging={authMessaging}
+						authComponent="signup"
 					/>
 					<form
 						onSubmit={handleSignup}

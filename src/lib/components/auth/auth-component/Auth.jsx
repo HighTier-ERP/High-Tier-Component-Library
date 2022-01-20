@@ -3,6 +3,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+
+//INTERNAL IMPORTS
 import Input from '../../inputs/input-component/Input';
 import Button from '../../utilities/button-component/Button';
 import MotionDiv from '../../layout/motion-div-component/MotionDiv';
@@ -16,39 +18,17 @@ const FadeUp = {
 	hidden: { opacity: 0, y: 20, x: 0 }
 };
 
-const AlertContent = ({ message }) => {
-	return message ? (
-		<p
-			className={`${
-				message.type === 'error' ? 'text-pink' : 'text-green'
-			} border ${
-				message.type === 'error' ? 'border-pink' : 'border-green'
-			} py-30px mb-10px`}
-		>
-			{message.content}
-		</p>
-	) : null;
-};
-
-const SignUpAnchor = ({ router, classes }) => {
-	function goToOnboading() {
-		router.push('/signup');
-	}
-	return (
-		<span className="w-full" onClick={() => goToOnboading()}>
-			<div className={classes}>
-				Need an account? <br />
-				<p className="f-w-600 f-s-18px">Sign Up</p>
-			</div>
-		</span>
-	);
-};
-
-const PageTitle = ({ hidePageTitle, authMessaging }) => {
+const PageTitle = ({ hidePageTitle, authMessaging, authComponent }) => {
 	return (
 		!hidePageTitle && (
-			<div className="pb-200px">
-				<h1 className="py-20px"> Login </h1>
+			<div
+				className={classNames(
+					authComponent === 'login' ? 'pb-200px' : 'mb-20px'
+				)}
+			>
+				<h1 className="py-20px">
+					{authComponent === 'login' ? 'Login' : 'Sign Up'}
+				</h1>
 				<p>{authMessaging}</p>
 			</div>
 		)
@@ -109,6 +89,22 @@ const Inputs = ({
 	);
 };
 
+const AlertContent = ({ message }) => {
+	return message.content ? (
+		<span className="alert-content flex flex-row justify-center">
+			<p
+				className={classNames(
+					'py-30px mb-10px border',
+					message.type === 'error' ? 'text-pink' : 'text-green',
+					message.type === 'error' ? 'border-pink' : 'border-green'
+				)}
+			>
+				{message.content}
+			</p>
+		</span>
+	) : null;
+};
+
 const ShowPasswordInput = ({
 	showPasswordInput,
 	setPassword,
@@ -123,10 +119,24 @@ const ShowPasswordInput = ({
 			}}
 		>
 			<span>
-				Or sign in with{' '}
+				Sign in with{' '}
 				<u>{showPasswordInput ? 'magic link' : 'password'}</u>.
 			</span>
 		</div>
+	);
+};
+
+const SignUpAnchor = ({ router, classes }) => {
+	function goToOnboading() {
+		router.push('/signup');
+	}
+	return (
+		<span className="w-full" onClick={() => goToOnboading()}>
+			<div className={classes}>
+				Need an account? <br />
+				<p className="f-w-600 f-s-18px">Sign Up</p>
+			</div>
+		</span>
 	);
 };
 
@@ -277,6 +287,7 @@ const Auth = ({
 							<PageTitle
 								hidePageTitle={hidePageTitle}
 								authMessaging={authMessaging}
+								authComponent="Logins"
 							/>
 							<SignUpAnchor
 								router={router}
