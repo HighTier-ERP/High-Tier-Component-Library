@@ -7,6 +7,7 @@ import Accordion from './components/utilities/accordion-component/Accordion';
 import Avatar from './components/identity/avatar-component/Avatar';
 import AvatarSupabase from './components/identity/avatar-supabase-component/AvatarSupabase';
 import Auth from './components/auth/auth-component/Auth';
+import Onboarding from './components/auth/onboarding-component/Onboarding';
 import Button from './components/utilities/button-component/Button';
 import Calendar from './components/utilities/calendar-component/Calendar';
 import CheckBox from './components/inputs/checkbox-component/CheckBox';
@@ -27,6 +28,7 @@ import ToggleSwitch from './components/inputs/toggle-switch-component/ToggleSwit
 
 export {
 	Auth,
+	Onboarding,
 	Accordion,
 	Avatar,
 	AvatarSupabase,

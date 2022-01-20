@@ -17,19 +17,17 @@ const FadeUp = {
 };
 
 const AlertContent = ({ message }) => {
-	return (
-		message.content && (
-			<p
-				className={`${
-					message.type === 'error' ? 'text-pink' : 'text-green'
-				} border ${
-					message.type === 'error' ? 'border-pink' : 'border-green'
-				} py-30px mb-10px`}
-			>
-				{message.content}
-			</p>
-		)
-	);
+	return message ? (
+		<p
+			className={`${
+				message.type === 'error' ? 'text-pink' : 'text-green'
+			} border ${
+				message.type === 'error' ? 'border-pink' : 'border-green'
+			} py-30px mb-10px`}
+		>
+			{message.content}
+		</p>
+	) : null;
 };
 
 const SignUpAnchor = ({ router, classes }) => {
@@ -46,7 +44,7 @@ const SignUpAnchor = ({ router, classes }) => {
 	);
 };
 
-const PageTitle = ({ hidePageTitle }) => {
+const PageTitle = ({ hidePageTitle, authMessaging }) => {
 	return (
 		!hidePageTitle && (
 			<div className="pb-200px">
@@ -124,9 +122,10 @@ const ShowPasswordInput = ({
 				setShowPasswordInput(!showPasswordInput);
 			}}
 		>
-			{`Or sign in with ${
-				showPasswordInput ? 'magic link' : 'password'
-			}.`}
+			<span>
+				Or sign in with{' '}
+				<u>{showPasswordInput ? 'magic link' : 'password'}</u>.
+			</span>
 		</div>
 	);
 };
@@ -269,7 +268,7 @@ const Auth = ({
 
 								<SignUpAnchor
 									router={router}
-									classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column"
+									classes="pointer my-20px relative bottom-10px py-20px px-30px bg-black-1 br-8px w-full text-decoration-none text-black flex flex-column none-md-up"
 								/>
 							</div>
 						</form>
@@ -311,6 +310,7 @@ const Auth = ({
 						'br-24px flex flex-column items-center mt-20px relative mx-auto none-md-dow p-50px bg-yellow-1 box-shadow'
 					)}
 				>
+					<AlertContent message={message} />
 					<PageTitle
 						hidePageTitle={hidePageTitle}
 						authMessaging={authMessaging}
@@ -319,8 +319,6 @@ const Auth = ({
 						onSubmit={handleSignin}
 						className="flex flex-column w-full bg-black-1 br-8px pt-30px pb-20px px-50px"
 					>
-						<AlertContent message={message} />
-
 						<WelcomeContent
 							welcomeMessage={welcomeMessage}
 							welcomeMessageSubContent={welcomeMessageSubContent}

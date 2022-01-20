@@ -303,6 +303,12 @@ Object.defineProperty(exports, "OfficeIcon", {
     return _icons.OfficeIcon;
   }
 });
+Object.defineProperty(exports, "Onboarding", {
+  enumerable: true,
+  get: function get() {
+    return _Onboarding.default;
+  }
+});
 Object.defineProperty(exports, "OnlyInLocal", {
   enumerable: true,
   get: function get() {
@@ -569,6 +575,8 @@ var _Avatar = _interopRequireDefault(require("./components/identity/avatar-compo
 var _AvatarSupabase = _interopRequireDefault(require("./components/identity/avatar-supabase-component/AvatarSupabase"));
 
 var _Auth = _interopRequireDefault(require("./components/auth/auth-component/Auth"));
+
+var _Onboarding = _interopRequireDefault(require("./components/auth/onboarding-component/Onboarding"));
 
 var _Button = _interopRequireDefault(require("./components/utilities/button-component/Button"));
 
