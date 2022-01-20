@@ -129,7 +129,7 @@ const Onboarding = ({
 			classes="bg-white h-full"
 		>
 			<div
-				className="w-100 mx-auto px-30px pb-80px h-full"
+				className="w-100 mx-auto pt-30px px-30px pb-80px h-full"
 				style={{
 					backgroundImage: `url(${backgroundImageRef})`,
 					backgroundSize: 'cover'
