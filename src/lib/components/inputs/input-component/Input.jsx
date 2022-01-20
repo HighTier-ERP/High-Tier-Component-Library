@@ -1,6 +1,7 @@
 //PACKAGE IMPORTS
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import classNames from 'classnames';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
@@ -17,7 +18,7 @@ const Input = ({
 	groupClasses
 }) => {
 	return (
-		<div className={`form__group field ${groupClasses}`}>
+		<div className={classNames(groupClasses, 'form__group field')}>
 			<input
 				type={type}
 				className={`form__field ${classes}`}

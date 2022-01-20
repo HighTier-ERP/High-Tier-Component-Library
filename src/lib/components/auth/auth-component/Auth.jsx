@@ -134,7 +134,6 @@ const WelcomeContent = ({ welcomeMessage, welcomeMessageSubContent }) => {
 	return (
 		<>
 			<h2 className="pt-20px">{welcomeMessage}</h2>
-
 			<h3 className="py-20px">{welcomeMessageSubContent}</h3>
 		</>
 	);

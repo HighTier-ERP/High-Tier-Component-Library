@@ -1,7 +1,11 @@
 //PACKAGE IMPORTS
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 import Input from '../../inputs/input-component/Input';
 import Button from '../../utilities/button-component/Button';
+import MotionDiv from '../../layout/motion-div-component/MotionDiv';
 
 //COMPONENT DESCRIPTION
 /*----------------------------------------------------------------------------*/
@@ -22,12 +26,40 @@ const AlertContent = ({ message }) => {
 	) : null;
 };
 
+const FadeUp = {
+	hidden: { opacity: 0, y: 20, x: 0 }
+};
+
+const PageTitle = ({ hidePageTitle, authMessaging }) => {
+	return (
+		!hidePageTitle && (
+			<div className="pointer mb-20px">
+				<h1 className="py-20px"> Sign Up </h1>
+				<p>{authMessaging}</p>
+			</div>
+		)
+	);
+};
+
+const RegisterContent = ({ registerMessage, registerMessageSubContent }) => {
+	return (
+		<>
+			<h2 className="pt-20px">{registerMessage}</h2>
+			<h3 className="py-20px">{registerMessageSubContent}</h3>
+		</>
+	);
+};
+
 const Onboarding = ({
 	useUser,
 	updateUserName,
 	updateStatus,
 	backgroundImageRef,
-	authMessaging
+	authMessaging,
+	maxWidthClass,
+	hidePageTitle,
+	registerMessage,
+	registerMessageSubContent
 }) => {
 	const [message, setMessage] = useState({ type: '', content: '' });
 	const [supabaseUser, setSupabaseUser] = useState(null);
@@ -36,6 +68,9 @@ const Onboarding = ({
 	const [password, setPassword] = useState(null);
 
 	const { signUp } = useUser();
+
+	const controls = useAnimation();
+	const [ref, inView] = useInView();
 
 	function handleName(event) {
 		setName(event.target.value);
@@ -71,67 +106,101 @@ const Onboarding = ({
 		}
 	};
 
+	useEffect(() => {
+		if (inView) {
+			controls.start((i) => ({
+				type: 'spring',
+				bounce: 0.25,
+				opacity: 1,
+				y: 0,
+				x: 0,
+				transition: { ease: [0.17, 0.67, 0.83, 0.67], delay: i * 1 }
+			}));
+		}
+	}, [controls, inView]);
+
 	return (
-		<div
-			className="w-100 mx-auto px-30px pb-25px pt-80px h-full"
-			style={{
-				backgroundImage: `url(${backgroundImageRef})`,
-				backgroundSize: 'cover'
-			}}
+		<MotionDiv
+			componentRef={ref}
+			custom={0.4}
+			animation={controls}
+			initialValue="hidden"
+			variant={FadeUp}
+			classes="bg-white h-full"
 		>
-			<div className="flex flex-column max-w-450px mx-auto w-full mt-80px mb-30px px-30px py-30px my-75px br-8px b-default bg-white box-shadow">
-				<AlertContent message={message} />
-
-				<div className="pointer mb-20px">
-					<h1 className="py-20px"> Sign Up </h1>
-					<p>{authMessaging}</p>
-				</div>
-
-				<form onSubmit={handleSignup}>
-					<Input
-						placeholder="Name"
-						name="name"
-						type="text"
-						autoComplete="off"
-						value={name}
-						onChange={handleName}
-						classes="mb-20px"
+			<div
+				className="w-100 mx-auto px-30px pb-80px h-full"
+				style={{
+					backgroundImage: `url(${backgroundImageRef})`,
+					backgroundSize: 'cover'
+				}}
+			>
+				<div
+					className={classNames(
+						maxWidthClass,
+						'flex flex-column mx-auto w-full mt-80px mb-30px my-75px br-24px p-50px bg-white box-shadow'
+					)}
+				>
+					<AlertContent message={message} />
+					<PageTitle
+						hidePageTitle={hidePageTitle}
+						authMessaging={authMessaging}
 					/>
-					<Input
-						placeholder="Email"
-						name="email"
-						type="email"
-						autoComplete="off"
-						value={email}
-						onChange={handleEmail}
-						classes="mb-20px"
-					/>
-					<Input
-						placeholder="Password"
-						name="password"
-						type="password"
-						autoComplete="off"
-						value={password}
-						onChange={handlePassword}
-						classes="mb-20px"
-					/>
-					<div>
-						<Button
-							classes="mt-30px mb-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer bw-1px f-w-800"
-							label="Sign Up"
-							disabled={
-								name === null ||
-								email === null ||
-								password === null ||
-								name === '' ||
-								email === '' ||
-								password === ''
+					<form
+						onSubmit={handleSignup}
+						className="flex flex-column w-full bg-black-1 br-8px pt-30px pb-20px px-50px"
+					>
+						<RegisterContent
+							registerMessage={registerMessage}
+							registerMessageSubContent={
+								registerMessageSubContent
 							}
 						/>
-					</div>
-				</form>
+						<Input
+							placeholder="Name"
+							name="name"
+							type="text"
+							autoComplete="off"
+							value={name}
+							onChange={handleName}
+							classes="mb-20px"
+						/>
+						<Input
+							placeholder="Email"
+							name="email"
+							type="email"
+							autoComplete="off"
+							value={email}
+							onChange={handleEmail}
+							classes="mb-20px"
+						/>
+						<Input
+							placeholder="Password"
+							name="password"
+							type="password"
+							autoComplete="off"
+							value={password}
+							onChange={handlePassword}
+							classes="mb-20px"
+						/>
+						<div>
+							<Button
+								classes="mt-30px mb-30px bg-black text-white h-40px px-30px w-200px br-full flex items-center pointer bw-1px f-w-800"
+								label="Sign Up"
+								disabled={
+									name === null ||
+									email === null ||
+									password === null ||
+									name === '' ||
+									email === '' ||
+									password === ''
+								}
+							/>
+						</div>
+					</form>
+				</div>
 			</div>
-		</div>
+		</MotionDiv>
 	);
 };
 
