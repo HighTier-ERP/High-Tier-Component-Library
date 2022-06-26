@@ -115,18 +115,6 @@
   letter-spacing: 3px;
 }
 
-@mixin ease-in-out {
-  -webkit-transition: all 0.2s ease-in-out 0.8s;
-  -o-transition: all 0.2s ease-in-out 0.8s;
-  transition: all 0.2s ease-in-out 0.8s;
-}
-
-@mixin ease-in-out-2 {
-  -webkit-transition: all 0.1s ease-in-out 0.3s;
-  -o-transition: all 0.1s ease-in-out 0.3s;
-  transition: all 0.1s ease-in-out 0.3s;
-}
-
 @mixin block {
   display: block;
 }

@@ -6,13 +6,13 @@ import React from 'react';
 //Site configurable button for UI using react router dom
 /*----------------------------------------------------------------------------*/
 
-const Button = ({ classes, label, navTo, hasLink, type, disabled, margin, children }) => {
+const Button = ({ classes, label, hasLink, type, disabled, margin, children, groupName }) => {
 	return hasLink ? (
 		<div className={`text-decoration-none hasLink ${margin}`}>
 			{children}
 		</div>
 	) : (
-		<button type={type} className={classes} disabled={disabled}>
+		<button type={type} className={classes} disabled={disabled} name={groupName}>
 			{' '}
 			{label}
 		</button>

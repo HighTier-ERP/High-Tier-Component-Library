@@ -11,12 +11,12 @@ import classNames from 'classnames';
 
 const SingleAccordion = ({
 	children,
-	accordionTitleText,
-	accordionTitleClass,
+	titleText,
+	titleClass,
 	isExpanded,
-	accordionIcon,
-	accordionWidth,
-	accordionActionPosition
+	icon,
+	width,
+	actionPosition
 }) => {
 	const [expanded, setExpanded] = useState(isExpanded);
 	return (
@@ -25,7 +25,7 @@ const SingleAccordion = ({
 			className={classNames(
 				'accordion-item b-b-default',
 				expanded ? 'active-accordion' : '',
-				accordionWidth
+				width
 			)}
 			role="button"
 			onClick={() => setExpanded(!expanded)}
@@ -33,21 +33,21 @@ const SingleAccordion = ({
 			<span
 				className={classNames(
 					'flex flex-row items-center pointer',
-					accordionActionPosition === 'left'
+					actionPosition === 'left'
 						? 'flex-direction-row-reverse justify-end'
 						: ''
 				)}
 			>
-				<span className="material-icons f-s-3rem">{accordionIcon}</span>
+				<span className="material-icons f-s-3rem">{icon}</span>
 				<p
 					className={classNames(
-						accordionActionPosition === 'left'
+						actionPosition === 'left'
 							? 'pl-1rem'
 							: 'pr-1rem',
-						accordionTitleClass
+						titleClass
 					)}
 				>
-					{accordionTitleText}
+					{titleText}
 				</p>
 				<button
 					className="br-full block accordion-btn box-shadow pointer"
@@ -58,21 +58,21 @@ const SingleAccordion = ({
 					</span>
 				</button>
 			</span>
-			<>{expanded && children}</>
+			{children}
 		</article>
 	);
 };
 
 const GroupAccordion = ({
 	children,
-	accordionTitleText,
-	accordionTitleClass,
-	accordionIcon,
+	titleText,
+	titleClass,
+	icon,
 	accordId,
 	activeId,
 	setActiveId,
-	accordionWidth,
-	accordionActionPosition
+	width,
+	actionPosition
 }) => {
 	const [expanded, setExpanded] = useState(false);
 
@@ -91,7 +91,7 @@ const GroupAccordion = ({
 			className={classNames(
 				'accordion-group-item b-b-default',
 				expanded ? 'active-accordion' : '',
-				accordionWidth
+				width
 			)}
 			onClick={handleExpand}
 			aria-expanded={expanded}
@@ -99,21 +99,21 @@ const GroupAccordion = ({
 			<span
 				className={classNames(
 					'flex flex-row items-center pointer',
-					accordionActionPosition === 'left'
+					actionPosition === 'left'
 						? 'flex-direction-row-reverse justify-end'
 						: ''
 				)}
 			>
-				<span className="material-icons f-s-3rem">{accordionIcon}</span>
+				<span className="material-icons f-s-3rem">{icon}</span>
 				<p
 					className={classNames(
-						accordionActionPosition === 'left'
+						actionPosition === 'left'
 							? 'pl-1rem'
 							: 'pr-1rem',
-						accordionTitleClass
+						titleClass
 					)}
 				>
-					{accordionTitleText}
+					{titleText}
 				</p>
 				<button
 					className="br-full block accordion-btn box-shadow pointer"
@@ -124,45 +124,53 @@ const GroupAccordion = ({
 					</span>
 				</button>
 			</span>
-			{expanded && children}
+				<span
+				className={classNames(
+					expanded
+						? 'fadeIn'
+						: 'fadeOut',
+				)}
+				>
+							{children}
+				</span>
 		</article>
 	);
 };
 
 const Accordion = ({
 	children,
-	accordionTitleText,
-	accordionTitleClass,
+	titleText,
+	titleClass,
 	isExpanded,
-	accordionIcon,
-	accordionType,
+	icon,
+	type,
 	accordId,
 	activeId,
 	setActiveId,
-	accordionWidth,
-	accordionActionPosition
+	width,
+	actionPosition
 }) => {
-	return accordionType === 'single' ? (
+	return type === 'single' ? (
 		<SingleAccordion
 			children={children}
-			accordionTitleText={accordionTitleText}
-			accordionTitleClass={accordionTitleClass}
+			titleText={titleText}
+			titleClass={titleClass}
 			isExpanded={isExpanded}
-			accordionIcon={accordionIcon}
-			accordionWidth={accordionWidth}
-			accordionActionPosition={accordionActionPosition}
+			icon={icon}
+			width={width}
+			actionPosition={actionPosition}
 		/>
 	) : (
 		<GroupAccordion
 			children={children}
-			accordionTitleText={accordionTitleText}
-			accordionTitleClass={accordionTitleClass}
-			accordionIcon={accordionIcon}
+			titleText={titleText}
+			titleClass={titleClass}
+			icon={icon}
 			accordId={accordId}
 			activeId={activeId}
 			setActiveId={setActiveId}
-			accordionWidth={accordionWidth}
-			accordionActionPosition={accordionActionPosition}
+			width={width}
+			actionPosition={actionPosition}
 		/>
 	);
 };

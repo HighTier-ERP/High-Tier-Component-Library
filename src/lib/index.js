@@ -4,6 +4,7 @@
 /*----------------------------------------------------------------------------*/
 
 import Accordion from './components/utilities/accordion-component/Accordion';
+import AccordionGroup from './components/utilities/accordion-component/AccordionGroup';
 import Avatar from './components/identity/avatar-component/Avatar';
 import AvatarSupabase from './components/identity/avatar-supabase-component/AvatarSupabase';
 import Auth from './components/auth/auth-component/Auth';
@@ -13,9 +14,10 @@ import Calendar from './components/utilities/calendar-component/Calendar';
 import CheckBox from './components/inputs/checkbox-component/CheckBox';
 import DocumentCard from './components/documentation/document-card-component/DocumentCard';
 import DynamicIcon from './components/visual-communication/dynamic-icon-component/DynamicIcon';
-import Loading from './components/utilities/loading-component/Loading';
 import DateInput from './components/inputs/date-input-component/DateInput';
 import Input from './components/inputs/input-component/Input';
+import Loading from './components/utilities/loading-component/Loading';
+import HtclLayout from './components/layout/htcl-layout-component/HtclLayout';
 import ElementWithBg from './components/layout/element-with-bg-component/ElementWithBg';
 import Marquee from './components/visual-communication/marquee-component/Marquee';
 import MotionDiv from './components/layout/motion-div-component/MotionDiv';
@@ -30,6 +32,7 @@ export {
 	Auth,
 	Onboarding,
 	Accordion,
+	AccordionGroup,
 	Avatar,
 	AvatarSupabase,
 	Button,
@@ -48,7 +51,8 @@ export {
 	TextArea,
 	RadioBtn,
 	Select,
-	ToggleSwitch
+	ToggleSwitch,
+	HtclLayout
 };
 
 // Flags - Hooks and Components

@@ -101,8 +101,8 @@ const Onboarding = ({
 			setMessage({ type: 'error', content: error.message });
 		} else {
 			if (user) {
-				await updateUserName(user, name);
 				setSupabaseUser(user);
+				await updateUserName(user, name);
 				setMessage({
 					type: 'note',
 					content: 'Check your email for the confirmation link.'

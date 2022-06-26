@@ -6,6 +6,14 @@
 	padding-bottom: 20px;
 }
 
+.accordion-item-styled {
+	justify-content: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
 .accordion-group-item {
 	justify-content: flex-start;
 	display: flex;
@@ -20,4 +28,11 @@
 	height: 30px;
 	color: #ffffff;
 	border: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.accordion-dropdown{
+	display: none!important;
 }
